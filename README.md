@@ -8,7 +8,12 @@ Page structure
 			- example.jpg 
 		- styles (folder)
 			- base (folder)
+				- _global.css
+				- etc.
 			- modules (folder)
+				- _header.css
+				- _wrapper.css
+				- etc.
 			- styles.css (main css file)
 		- scripts (folder)
 			- script.js
