@@ -1,5 +1,7 @@
 # literature-site
-Web project within Systems Development
+Web project at Uppsala University.
+
+We are planning to use BEM to structure the CSS: http://getbem.com/naming/
 
 Page structure
 - index.php (Starting page. Search/Filter function and showcase of reviewed books)
