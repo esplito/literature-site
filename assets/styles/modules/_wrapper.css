@@ -1,0 +1,9 @@
+.wrapper{
+	width: 100%;
+}
+
+.wrapper--half{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
