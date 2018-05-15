@@ -26,3 +26,4 @@ Page structure
 		- inbox.php
 		- message.php
 		
+![Home Page](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/start_page.png)
