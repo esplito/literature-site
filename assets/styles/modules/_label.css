@@ -1,0 +1,10 @@
+.label{
+	display: block;
+	text-align: left;
+	font-weight: 700;
+}
+
+.label.label--centered{
+	text-align: center;
+	margin-bottom: 10px;
+}

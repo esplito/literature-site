@@ -1,0 +1,21 @@
+.modal{
+	z-index: 99;
+	background-color: rgba(255, 255, 255, 0.9);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.modal__inner{
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top: 50%; 
+	left: 50%;
+	width: 70%;
+	text-align: center;
+}
+
+.modal__alt{
+	margin-top: 60px;
+}

@@ -1,0 +1,19 @@
+.form .form__row{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form .form__row > input {
+	width: 100%;
+	padding: 10px 5px;
+	margin-top: 8px;
+}
+
+.form .form__row {
+	margin-top: 10px;
+}
+
+.form .form__row.form__row--btn{
+	margin-top: 30px;
+}
