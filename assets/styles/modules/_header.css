@@ -3,23 +3,14 @@
 	height: 200px;
 }
 
-.titlex{
-
-	background-color: #FF0000;
-	color: #FFFFFF;
-	text-align: center;
-	margin-left: 0px;
-	margin-right: auto;
-	width: 200px
-
-}
 
 a {
   color: white;
 }
+
 .title {
     position: relative;
-    width: 120px;
+    width: 140px;
     padding: 10px 20px 10px 10px;
     font-size: 20px;
     position: relative;
@@ -40,4 +31,50 @@ a {
     -ms-transform: skew(-30deg, 0deg);
     -webkit-transform: skew(-30deg, 0deg);
     transform: skew(-30deg, 0deg);
+}
+
+.topnav-box {
+margin-top: 20px;
+margin-left: 20%;
+margin-right: 20%;
+height: 30px;
+
+}
+
+.topnav a {
+    position: relative;
+    width: 140px;
+    padding: 10px 20px 10px 10px;
+    font-size: 20px;
+    position: relative;
+    color: #FFF;
+    background: #FF0000;
+}
+.topnav a:after
+{
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #FF0000;
+    transform-origin: bottom left;
+    -ms-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    transform: skew(-30deg, 0deg);
+}
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    position: relative;
+    height: 100%; 
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+}
+.topnav input[type=text] {
+    border: 1px solid #ccc;
+}
 }
