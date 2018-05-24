@@ -8,10 +8,6 @@
 </head>
 <body>
 	<div class="modal">
-		<div class="modal__close">
-			<div class="close__line--left"></div>
-			<div class="close__line--right"></div>
-		</div>
 		<div class="modal__inner">
 			<h1 class="modal__title">Logga in på kursbok.se</h1>
 			<form class="form" id="login">
@@ -32,6 +28,7 @@
 				<button class="btn btn--default" type="submit">Skapa konto</button>
 			</div>
 		</div>
+		<div class="modal__close">X</div>
 	</div>
 </body>
 </html>

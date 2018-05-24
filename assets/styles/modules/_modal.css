@@ -19,3 +19,15 @@
 .modal__alt{
 	margin-top: 60px;
 }
+
+.modal__close{
+	font-weight: 300;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 2.2rem;
+	transform: scaleX(1.4);
+	transform-origin: 100% 0;
+	color: #FF3B3F;
+	cursor: pointer;
+}
