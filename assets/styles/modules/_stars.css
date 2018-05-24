@@ -1,0 +1,19 @@
+.stars__star{
+	color: #D8D8D8;
+}
+
+.stars__star--bigger{
+	font-size: 2rem;
+}
+
+.stars__star--checked{
+	color: #FF3B3F;
+}
+
+.stars:hover span{
+	color: #FF3B3F;
+}
+
+.stars span:hover ~ span, .stars + span:hover{
+	color: #D8D8D8;
+} 
