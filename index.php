@@ -30,8 +30,8 @@
 		</div>
 	</header>
 	<div class="container">
-		<div class="wrapper--half">
-			<h1 class="section__title">Kursböcker med bästa omdöme!</h1>
+		<div class="wrapper__body">
+			<h1 class="section__title section__title--bigger">Kursböcker med bäst omdöme!</h1>
 		</div>
 	</div>
 </body>
