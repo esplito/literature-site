@@ -6,17 +6,28 @@
     <link href="../styles/styles.css" rel="stylesheet">
     <title></title>
   </head>
-  <body class="site-header">
-    <header class="site-header header">
-      <h1>Kursbok.se</h1>
+  <body>
+    <div class="site-header">
+      <div class="site-header__logo"
+          <h1>Kursbok.se</h1>
+      </div>
+      <div class="site-header__searchbar">
+          <input type="text" placeholder="Search...">
+      </div>
+      <div class="site-header__button">
+          <button><i SÖK class="fa fa-search"></i> </button>
+      </div>
 
-      <form class="search-form">
-      <input type="text" placeholder="Search...">
-      <button><i SÖK class="fa fa-search"></i> </button>
-      </form>
+      <div class="site-header__login-link">
+          <a href="login.php">Logga in</a>
+      </div>
 
-      <a class="login-link" href="login.php">Logga in</a>
+      <div class="site-header__loggedin">
+        <button><i class="fa fa-home"></i></button>
+      </div>
+      
 
-    </header>
+
+    </div>
   </body>
 </html>
