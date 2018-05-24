@@ -17,7 +17,7 @@
 				</div>
 				<div class="form__row">
 					<label class="label label--default">Lösenord</label>
-					<input type="password" placeholder="Skriv ditt lösenord här..." name="password">
+					<input type="password" placeholder="Skriv ditt lösenord här..." name="login-password">
 				</div>
 				<div class="form__row form__row--btn">
 					<button class="btn btn--default btn--green" type="submit">Logga in</button>
