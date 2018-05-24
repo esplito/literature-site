@@ -12,8 +12,8 @@
 			<h1 class="modal__title">Var vill du lägga till en bok?</h1>
 			<form class="form" id="book_type">
 				<div class="">
-					<button class="btn btn--default btn--white" type="submit">Ny bok på kursbok.se</button>
-          <button class="btn btn--default btn--white" type="submit">Ny bok i Mina böcker</button>
+					<button class="btn btn--square btn--white" type="submit">Ny bok på kursbok.se</button>
+          <button class="btn btn--square btn--white" type="submit">Ny bok i Mina Böcker</button>
         </div>
 			</form>
 		</div>
