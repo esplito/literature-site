@@ -15,3 +15,10 @@
 .btn--green{
 	background-color: #66C86C;
 }
+
+.btn--smaller{
+	background-color: #EFEFEF;
+	width: 120px;
+	color: #545454;
+	border: #979797 1px solid;
+}
