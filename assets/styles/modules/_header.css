@@ -64,6 +64,10 @@ header{
     z-index: 3;
 }
 
+.header__search__form{
+    height: 100%;
+}
+
 .header__search-box{
     height: 100%;
     width: 100%;
@@ -111,6 +115,7 @@ header{
     font-size: 0.875rem;
     line-height: 1rem;
     font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header__profile-btn {

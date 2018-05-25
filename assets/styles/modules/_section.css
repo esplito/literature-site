@@ -5,8 +5,43 @@
 
 .section__title--bigger{
 	font-size: 3rem;
+	margin-bottom: 35px;
 }
 
 .section__title--default{
 	font-size: 2rem;
+}
+
+.section__row{
+	width: 100%;
+	margin-bottom: 35px;
+}
+
+.section__btn-link{
+	display: block;
+	width: 140px;
+}
+
+.section__col-4{
+	float: center;
+	width: 33.33%;
+	display: inline-block;
+}
+
+.section__col-12{
+	width: 100%;
+}
+
+.section__col--s-margin{
+	margin-left: -50px;
+    margin-right: -50px;
+}
+
+.section__col--centered-content{
+	text-align: center;
+}
+
+.section__col--centered{
+	margin-left: auto;
+	margin-right: auto;
 }

@@ -12,6 +12,11 @@
 	font-size: 0.6875rem;
 }
 
+.btn--b-text{
+	width: 140px;
+	font-size: 0.875rem;
+}
+
 .btn--green{
 	background-color: #66C86C;
 }
