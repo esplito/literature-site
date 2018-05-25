@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1:3306
--- Tid vid skapande: 24 maj 2018 kl 14:42
+-- Tid vid skapande: 25 maj 2018 kl 09:09
 -- Serverversion: 5.7.20
 -- PHP-version: 5.6.35
 
@@ -42,20 +42,6 @@ CREATE TABLE IF NOT EXISTS `book_table` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `book_x_user_table`
---
-
-DROP TABLE IF EXISTS `book_x_user_table`;
-CREATE TABLE IF NOT EXISTS `book_x_user_table` (
-  `book_ISBN` int(255) NOT NULL,
-  `user_id` int(255) NOT NULL,
-  PRIMARY KEY (`book_ISBN`,`user_id`),
-  KEY `read_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Tabellstruktur `comment_table`
 --
 
@@ -63,35 +49,11 @@ DROP TABLE IF EXISTS `comment_table`;
 CREATE TABLE IF NOT EXISTS `comment_table` (
   `comment_id` int(255) NOT NULL AUTO_INCREMENT,
   `comment_comment` varchar(200) NOT NULL,
-  `user_id` int(3) NOT NULL,
-  `dis_id` int(255) NOT NULL,
-  PRIMARY KEY (`comment_id`),
-  KEY `user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Tabellstruktur `disscussion_x_book_table`
---
-
-DROP TABLE IF EXISTS `disscussion_x_book_table`;
-CREATE TABLE IF NOT EXISTS `disscussion_x_book_table` (
-  `dis_id` int(255) NOT NULL,
+  `user_id` int(255) NOT NULL,
   `book_ISBN` int(255) NOT NULL,
-  PRIMARY KEY (`dis_id`,`book_ISBN`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Tabellstruktur `rating_type_table`
---
-
-DROP TABLE IF EXISTS `rating_type_table`;
-CREATE TABLE IF NOT EXISTS `rating_type_table` (
-  `rating_type` varchar(256) NOT NULL,
-  `rating_number` int(1) NOT NULL
+  PRIMARY KEY (`comment_id`),
+  KEY `user_id` (`user_id`),
+  KEY `ISBN_fk` (`book_ISBN`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -108,6 +70,19 @@ CREATE TABLE IF NOT EXISTS `review_table` (
   `rating_by_user` int(255) NOT NULL,
   KEY `user_id_fk` (`user_id`,`book_ISBN`),
   KEY `ISBN_fk` (`book_ISBN`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `user_book`
+--
+
+DROP TABLE IF EXISTS `user_book`;
+CREATE TABLE IF NOT EXISTS `user_book` (
+  `user_id_fk` int(255) NOT NULL,
+  `book_ISBN_fk` int(255) NOT NULL,
+  PRIMARY KEY (`user_id_fk`,`book_ISBN_fk`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -140,7 +115,7 @@ INSERT INTO `user_grade_table` (`user_grade_level`, `user_grade_name`) VALUES
 
 DROP TABLE IF EXISTS `user_table`;
 CREATE TABLE IF NOT EXISTS `user_table` (
-  `user_id` int(3) NOT NULL AUTO_INCREMENT,
+  `user_id` int(255) NOT NULL AUTO_INCREMENT,
   `user_uname` varchar(256) NOT NULL,
   `user_email` varchar(256) NOT NULL,
   `user_password` varchar(256) NOT NULL,
@@ -149,7 +124,8 @@ CREATE TABLE IF NOT EXISTS `user_table` (
   `user_school` varchar(256) DEFAULT NULL,
   `user_picture` blob,
   `user_level` int(1) NOT NULL,
-  PRIMARY KEY (`user_id`)
+  PRIMARY KEY (`user_id`),
+  KEY `user_level` (`user_level`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -157,16 +133,10 @@ CREATE TABLE IF NOT EXISTS `user_table` (
 --
 
 --
--- Restriktioner för tabell `book_x_user_table`
---
-ALTER TABLE `book_x_user_table`
-  ADD CONSTRAINT `read_book_ISBN` FOREIGN KEY (`book_ISBN`) REFERENCES `book_table` (`book_ISBN`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `read_user_id` FOREIGN KEY (`user_id`) REFERENCES `user_table` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Restriktioner för tabell `comment_table`
 --
 ALTER TABLE `comment_table`
+  ADD CONSTRAINT `book_isbn_fk` FOREIGN KEY (`book_ISBN`) REFERENCES `book_table` (`book_ISBN`),
   ADD CONSTRAINT `user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user_table` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
@@ -175,6 +145,12 @@ ALTER TABLE `comment_table`
 ALTER TABLE `review_table`
   ADD CONSTRAINT `ISBN_fk` FOREIGN KEY (`book_ISBN`) REFERENCES `book_table` (`book_ISBN`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `user_table` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Restriktioner för tabell `user_table`
+--
+ALTER TABLE `user_table`
+  ADD CONSTRAINT `user_table_ibfk_1` FOREIGN KEY (`user_level`) REFERENCES `user_grade_table` (`user_grade_level`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
