@@ -1,5 +1,9 @@
 .img__book{
+	float:left;
+}
 
+.img__book--small{
+	height: 120px;
 }
 
 .img__book--medium{
