@@ -7,14 +7,15 @@ $user_password = $connection->real_escape_string($_POST['user_password']);
 $user_first = $connection->real_escape_string($_POST['user_first']);
 $user_last = $connection->real_escape_string($_POST['user_last']);
 $user_school = $connection->real_escape_string($_POST['user_school']);
-//$user_picture = 
+$user_picture = $connection->real_escape_string($_POST['user_picture']);
 $createAcc = $_POST['createAcc'];
 
 	if ($createAcc) 
 	{
 		if($user_uname!=""&&$user_email!=""&&$user_password!=""&&$user_first!=""&&$user_last!="") 
 		{
-			$insert = $connection -> query("INSERT INTO User_Table (user_uname, user_email, user_password, user_first, user_last, user_school, user_level) VALUES ('".$user_uname."','".$user_email."','".$user_password."','".$user_first."','".$user_last."','".$user_school."','1')");
+			$insert = $connection -> query("INSERT INTO User_Table (user_uname, user_email, user_password, user_first, user_last, user_school, user_picture, user_level) VALUES ('".$user_uname."','".$user_email."','".$user_password."','".$user_first."','".$user_last."','".$user_school."',"LOAD_FILE($user_picture)",'1')");
+
 		}
 		else 
 		{
