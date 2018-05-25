@@ -26,10 +26,10 @@
 				<div class="header__login">
 					<a href="#" id="login-btn">Logga in</a>
 				</div>
-				<!-- Profil-knapp -->
-				<!--<div class="header__profile-btn">
+				<!-- Profil-knapp när man är inloggad -->
+				<!-- <div class="header__profile-btn">
 					<button><i class="fa fa-user-circle"></i></button>
-				</div>-->
+				</div> -->
 			</div>
 		</div>
 	</header>
