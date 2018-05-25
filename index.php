@@ -17,21 +17,75 @@
 				</a>
 			</div>
 			<div class="header__search">
-				<input type="text" placeholder="Sök bland omdömen på massor av kursböcker!" class="header__search-box">
-				<div class="header__search-btn">
-					<button><i class="fa fa-search"></i></button>
-				</div>
+				<form class="header__search__form">
+					<input type="text" placeholder="Sök bland omdömen på massor av kursböcker!" class="header__search-box">
+					<div class="header__search-btn">
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</div>
+				</form>
 			</div>
 			<div class="header__user">
 				<div class="header__login">
 					<a href="#" id="login-btn">Logga in</a>
 				</div>
+				<!-- Profil-knapp när man är inloggad -->
+				<!-- <div class="header__profile-btn">
+					<button><i class="fa fa-user-circle"></i></button>
+				</div> -->
 			</div>
 		</div>
 	</header>
 	<div class="container">
 		<div class="wrapper__body">
 			<h1 class="section__title section__title--bigger">Kursböcker med bäst omdöme!</h1>
+			<div class="section__row">
+				<div class="section__col-4 section__col--centered-content">
+					<a href="#">
+						<img src="./assets/images/systems-analysis.jpg" class="img__book--medium">
+					</a>
+					<div class="rating">
+						<span class="stars__star fa fa-star stars__star--checked"></span>
+						<span class="stars__star fa fa-star stars__star--checked"></span>
+						<span class="stars__star fa fa-star stars__star--checked"></span>
+						<span class="stars__star fa fa-star stars__star--checked"></span>
+						<span class="stars__star fa fa-star"></span>
+					</div>
+					<a href="#" class="label label--smaller label--centered label--book-title">Systems Analysis and Design</a>
+				</div>
+				<div class="section__col-4 section__col--centered-content section__col--s-margin">
+					<a href="#">
+						<img src="./assets/images/business-information-systems.jpg" class="img__book--medium">
+					</a>
+					<div class="rating">
+						<span class="stars__star fa fa-star stars__star--checked"></span>
+						<span class="stars__star fa fa-star stars__star--checked"></span>
+						<span class="stars__star fa fa-star"></span>
+						<span class="stars__star fa fa-star"></span>
+						<span class="stars__star fa fa-star"></span>
+					</div>
+					<a href="#" class="label label--smaller label--centered label--book-title">Business Information Systems</a>
+				</div>
+				<div class="section__col-4 section__col--centered-content">
+					<a href="#">
+						<img src="./assets/images/how-to-think-like-a-programmer.jpg" class="img__book--medium">
+					</a>
+					<div class="rating">
+						<span class="stars__star fa fa-star stars__star--checked"></span>
+						<span class="stars__star fa fa-star"></span>
+						<span class="stars__star fa fa-star"></span>
+						<span class="stars__star fa fa-star"></span>
+						<span class="stars__star fa fa-star"></span>
+					</div>
+					<a href="#" class="label label--smaller label--centered label--book-title">How to THINK Like a Programmer</a>
+				</div>
+			</div>
+			<div class="section__row">
+				<div class="section__col-12">
+					<a href="#" class="section__btn-link section__col--centered">
+						<button class="btn btn--default btn--b-text">Visa alla</button>
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
