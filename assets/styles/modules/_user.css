@@ -2,12 +2,17 @@
 	width: 90%;
 }
 
-.user__image--small{
-	width: 10%;
+.user__image-holder{
+	width: 80px;
 }
 
-.user__id{
-	float: left;
+.user__name{
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.user__name > p{
+	margin-top: 28px;
 }
 
 .user__info{
@@ -21,4 +26,14 @@
 .user__row{
 	width: 100%;
 	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.user__row > div{
+	display: inline-block;
+	height: 80px;
+}
+
+.user__delete{
+	padding-top: 21px;
 }

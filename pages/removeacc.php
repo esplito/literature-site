@@ -42,22 +42,37 @@
       </div>
       <div class="section__row">
         <div class="section__col-12">
-          <div class="section__col-12--left">
-            <a href="#">
-              <img class="user__image--small" src="../assets/images/profile_pic.png">
-            </a>
-          </div>
-
-            <div class="user__id">
+          <div class="user__row section__row--align-l">
+            <div class="user__image-holder f-left">
+              <a href="#">
+                <img class="user__image" src="../assets/images/profile_pic.png">
+              </a>
+            </div>
+            <div class="user__name f-left">
               <p>whatthealgo</p>
             </div>
+            <div class="user__delete f-right">
+              <a href="#" class="section__btn-link">
+                <button class="btn btn--small btn--b-text">Ta bort</button>
+              </a>
+            </div>
+          </div>
 
-            <!--<div class="section__btn--right">
-            <a href="#" class="section__btn-link">
-              <button class="btn btn--small btn--b-text">Ta bort användare</button>
-            </a>
-          </div>-->
-
+          <div class="user__row section__row--align-l">
+            <div class="user__image-holder f-left">
+              <a href="#">
+                <img class="user__image" src="../assets/images/profile_pic.png">
+              </a>
+            </div>
+            <div class="user__name f-left">
+              <p>whatthealgo</p>
+            </div>
+            <div class="user__delete f-right">
+              <a href="#" class="section__btn-link">
+                <button class="btn btn--small btn--b-text">Ta bort</button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
