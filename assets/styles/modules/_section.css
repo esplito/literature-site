@@ -40,9 +40,18 @@
 	display: inline-block;
 }
 
+.section__col-4--left{
+	float:left;
+}
 .section__col-m-6{
 	width: 100%;
 	float: 	left;
+}
+
+.section__col-8{
+	width: 66.67%;
+	float: left;
+	display: inline-block;
 }
 
 .section__col-12{
