@@ -26,3 +26,18 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.label--profile{
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.label--v-centered{
+	height: 30px;
+	display: flex;
+    align-items: center;
+}
+
+.label--float-l{
+	float: left;
+}

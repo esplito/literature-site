@@ -29,6 +29,15 @@
 	overflow: hidden;
 }
 
+.section__row--s-margin{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.section__row--align-l{
+	text-align: left;
+}
+
 .section__btn-link{
 	display: block;
 	width: 140px;
@@ -70,6 +79,10 @@
 .section__col--s-margin{
 	margin-left: -50px;
     margin-right: -50px;
+}
+
+.section__col--padding-l{
+	padding-left: 80px;
 }
 
 .section__col--centered-content{
