@@ -25,13 +25,17 @@
 .section__row{
 	width: 100%;
 	margin-bottom: 35px;
-	display: block;	
-	overflow: hidden;	
+	display: block;
+	overflow: hidden;
 }
 
 .section__btn-link{
 	display: block;
 	width: 140px;
+}
+
+.section__btn--right{
+	float: right;
 }
 
 .section__col-4{
@@ -56,6 +60,11 @@
 
 .section__col-12{
 	width: 100%;
+	display: inline-block;
+}
+
+.section__col-12--left{
+	text-align: left;
 }
 
 .section__col--s-margin{
@@ -71,6 +80,8 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
+
 
 .section__book{
 	float: left;

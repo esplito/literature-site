@@ -42,9 +42,22 @@
       </div>
       <div class="section__row">
         <div class="section__col-12">
-          <div class="user">
-
+          <div class="section__col-12--left">
+            <a href="#">
+              <img class="user__image--small" src="../assets/images/profile_pic.png">
+            </a>
           </div>
+
+            <div class="user__id">
+              <p>whatthealgo</p>
+            </div>
+
+            <!--<div class="section__btn--right">
+            <a href="#" class="section__btn-link">
+              <button class="btn btn--small btn--b-text">Ta bort användare</button>
+            </a>
+          </div>-->
+
         </div>
       </div>
 

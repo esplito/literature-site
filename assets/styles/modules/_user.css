@@ -1,3 +1,11 @@
 .user__image{
 	width: 90%;
 }
+
+.user__image--small{
+	width: 10%;
+}
+
+.user__id{
+	float: left;
+}

@@ -5,6 +5,12 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
+.btn--small{
+	width: 150px;
+	color: #fff;
+	background-color: #FF3B3F;
+	font-size: 0.625rem;
+}
 .btn--default{
 	width: 180px;
 	color: #fff;
