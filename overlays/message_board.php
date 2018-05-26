@@ -7,11 +7,13 @@
 	<link href="../assets/styles/styles.css" rel="stylesheet">
 </head>
 <body>
+	<div class="message">
 	<div class="modal">
 		<div class="modal__inner">
-			<h1 class="modal__title">Chatta om boken!</h1>
-
-			<form class="form" id="book_type">
+			<h1 class="modal__title">Book title goes here!</h1>
+			<div class="message--container">
+			</div>
+			<form class="form" id="message_submit">
         <div class="form__row">
           <label class="label label--default">Meddelande</label>
           <input type="text" placeholder="Skriv ditt meddelande här..." name="review-title">
@@ -21,5 +23,6 @@
 		</div>
 		<div class="modal__close">X</div>
 	</div>
+</div>
 </body>
 </html>

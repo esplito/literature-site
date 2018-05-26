@@ -1,0 +1,13 @@
+.message {
+  width: 400px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+
+.message--container {
+  margin-left: auto;
+  margin-right: auto;
+  height: 90%;
+  width: 90%;
+}
