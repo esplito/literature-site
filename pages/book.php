@@ -44,9 +44,8 @@
 				<div class="section__col-4 section__col-4--left">
 					<div class="book">
 						<img class="img__book--large" src="../assets/images/business-information-systems.jpg">
-						<div class="">
-							<button class="btn btn--default btn--add-review">Ge omdöme</button>
-						</div>
+						<button class="btn btn--default btn--add-review">Ge omdöme</button>
+						<button class="btn btn--default btn--add-review" id="discuss">Diskutera</button>
 					</div>
 				</div>
 				<div class="section__col-8">
