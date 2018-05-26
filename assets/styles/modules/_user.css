@@ -1,3 +1,16 @@
 .user__image{
 	width: 90%;
 }
+
+.user__info{
+	text-align: left;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 35px;
+}
+
+.user__row{
+	width: 100%;
+	margin-bottom: 10px;
+}

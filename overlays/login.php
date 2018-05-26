@@ -25,7 +25,7 @@
 			</form>
 			<div class="modal__alt">
 				<label class="label label--centered">Har du inget konto?</label>
-				<button class="btn btn--default" type="submit">Skapa konto</button>
+				<button class="btn btn--default">Skapa konto</button>
 			</div>
 		</div>
 		<div class="modal__close">X</div>

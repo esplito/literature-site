@@ -39,3 +39,7 @@
 	border: #979797 1px solid;
 	margin: 15px;
 }
+
+.btn--a-full-w{
+	width: 90%;
+}

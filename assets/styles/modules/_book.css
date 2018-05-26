@@ -1,0 +1,10 @@
+.book-icon{
+	width: 30px;
+	float: left;
+	margin-right: 15px;
+}
+
+.book-icon:after{
+	content: " ";
+	clear: both;
+}

@@ -2,6 +2,12 @@
 	margin: 15px 0;
 }
 
+.rating--inline{
+	padding: 5px;
+	margin: 0 10px;
+	float: left;
+}
+
 .rating__small > .stars__star{
 	font-size: 1rem;
 }
