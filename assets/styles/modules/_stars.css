@@ -2,6 +2,10 @@
 	margin: 15px 0;
 }
 
+.rating--no-margin-t{
+	margin: 0 15px 15px 0;
+}
+
 .rating--inline{
 	padding: 5px;
 	margin: 0 10px;

@@ -8,3 +8,39 @@
 	content: " ";
 	clear: both;
 }
+
+.book{
+	text-align: left;
+}
+
+.book__title{
+	font-size: 1.25rem;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.book__author{
+	font-size: 1rem;
+	margin: 5px 0px;
+}
+
+.book__details__info{
+	font-size: 0.75rem;
+}
+
+.book__reviews{
+	background-color: #fff;
+	padding: 20px;
+}
+
+.book__reviews .rating{
+	float: left;
+}
+
+.book__reviews__comment{
+	float: left;
+}
+
+.book__reviews__user{
+	float: right;
+}

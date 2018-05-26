@@ -49,3 +49,8 @@
 .btn--a-full-w{
 	width: 90%;
 }
+
+.btn--add-review{
+	width: 200px;
+	margin-top: 20px;
+}

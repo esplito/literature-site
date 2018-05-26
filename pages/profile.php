@@ -44,11 +44,11 @@
 						<h3>whatthealgo</h3>
 						<div class="user__info">
 							<div class="user__row">
-								<label class="label label--profile">Skola: </label>
+								<label class="label label--attribute">Skola: </label>
 								<span class="user__info__school">Uppsala universitet</span>
 							</div>
 							<div class="user__row">
-								<label class="label label--profile">Antal omdömen: </label>
+								<label class="label label--attribute">Antal omdömen: </label>
 								<span class="user__info__review-number">3</span>
 							</div>
 						</div>

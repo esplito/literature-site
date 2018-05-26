@@ -65,7 +65,7 @@
               </a>
             </div>
             <div class="user__name f-left">
-              <p>whatthealgo</p>
+              <p>booksarelife</p>
             </div>
             <div class="user__delete f-right">
               <a href="#" class="section__btn-link">

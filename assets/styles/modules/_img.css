@@ -9,3 +9,7 @@
 .img__book--medium{
 	height: 175px;
 }
+
+.img__book--large{
+	width: 200px;
+}
