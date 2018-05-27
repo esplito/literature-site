@@ -57,9 +57,11 @@
 			</div>
 			<div class="section__row">
 				<div class="section__col-12">
-					<a href="#" class="section__btn-link section__col--centered">
-						<button class="btn btn--default btn--b-text">Visa alla</button>
+					<form action="./pages/results.php" method="post">
+					<a href="./pages/results.php" class="section__btn-link section__col--centered">
+						<button type="submit" name="show__all-btn" class="btn btn--default btn--b-text">Visa alla</button>
 					</a>
+					</form>
 				</div>
 			</div>
 		</div>
