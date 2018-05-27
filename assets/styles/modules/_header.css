@@ -101,14 +101,22 @@ header{
 
 .header__user {
     position: absolute;
-    right: 50px;
+    right: 10px;
     height: 50px;
+		width: 180px;
 }
 
 .header__login {
     position: relative;
     height: 100%;
     padding: 1.0625rem 0rem;
+}
+
+.header__logout {
+		float:left;
+		height: 100%;
+		padding-left: 2.0rem;
+		padding-top: 1.0625rem;
 }
 
 .header__user a{
@@ -123,6 +131,7 @@ header{
     z-index: 4;
     width: 50px;
     position: relative;
+		float:left;
 }
 
 .header__profile-btn > button {
