@@ -8,15 +8,15 @@ require('connect.php');
 
 	$get_user_query = $connection -> query("SELECT user_uname, user_school FROM User_Table WHERE user_id ='$get_id' ");
 
+	//$get_user_query = $connection -> query("SELECT user_uname, user_school FROM User_Table JOIN user_table ON user_table.user_id ='$get_id'.user_id ");
+
 	$get_rewiev_query = $connection -> query("SELECT rating_by_user FROM Review_Table WHERE user_id = '$get_id' ");
+	//$get_review_query = $connection -> query("SELECT rating_by_user FROM Review_Table JOIN review_table ON review_table.user_id = '$get_id'.user_i"); 
 
-	$get_book_query = $connection -> query("SELECT title FROM Book_Table
-		WHERE ISBN IN(SELECT ISBN FROM Books_Read WHERE User_id = '$get_id' ");
+	$get_review_count = $connection -> query("SELECT COUNT(*) book_ISBN FROM Review_Table WHERE user_id = '$get_id'")
+	//$get_review_count = $connection -> query("SELECT COUNT(*) book_ISBN FROM Review_Table JOIN review_table ON review_table.user_id = '$get_id'.user_id")
 
-	$get_review_count = $connection -> query("SELECT COUNT ISBN FROM Review_Table WHERE user_id = '$get_id'")
-
-
-	if($get_user_query === FALSE || $get_rewiev_query === FALSE || $get_book_query === FALSE || $get_review_count === FALSE) { 
+	if($get_user_query === FALSE || $get_rewiev_query === FALSE || $get_review_count === FALSE) { 
     die(mysql_error());
 	}
 
@@ -37,18 +37,12 @@ require('connect.php');
 		echo $rating_by_user'<br />';
 		}
 		
-		//Mina Böcker
-		while($row = mysqli_fetch_array($get_book_query))
-		{
-  		$title=$row['title'];	
-		echo $title'<br />';
-		}
-	
 		//Antal omdömmen
 		while($row = mysqli_fetch_array($get_review_count))
 		{
   		$ISBN=$row['ISBN'];	
 		echo $ISBN'<br />';
 		}
+
 
 ?>
