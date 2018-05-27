@@ -139,6 +139,7 @@
 		</div>
 		<div class="modal__close">X</div>
 	</div>
+	<?php include '../overlays/message_board.php' ?>
 	<script src="../assets/scripts/app.js" type="text/javascript"></script>
 </body>
 </html>

@@ -4,11 +4,27 @@
 	margin-right: auto;
 }
 
+.form .form__row--message {
+	width: 100%;
+	text-align: center;
+}
+
 .form .form__row > input {
 	width: 100%;
 	padding: 10px 5px;
 	margin-top: 8px;
 	border: #979797 1px solid;
+}
+
+.form .form__row > textarea {
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+    padding: 10px 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: #979797 1px solid;
+    height: 70px;
+    resize: none;
 }
 
 .form .form__row {

@@ -1,13 +1,86 @@
-.message {
+.message-board{
   width: 400px;
-  height: 100%;
-  position: absolute;
+  position: fixed;
   right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #FFF;
+  display: none;
+  z-index: 99;
+  border-left: 1px solid #545454;
 }
 
-.message--container {
-  margin-left: auto;
-  margin-right: auto;
-  height: 90%;
-  width: 90%;
+.message-board--visible{
+	display: block;
 }
+
+.message-board > [class*="message-board__"]{
+	width: 90%;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.message-board__title{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 90%;
+	font-size: 1.5rem;
+}
+
+.message-board__feed-header{
+	height: 5%;
+}
+
+.message-board__header{
+	height: 15%;
+	position: relative;
+}
+
+.message-board__header h1{
+	margin-top: 0;
+}
+
+
+.message-board__feed {
+  height: 55%;
+  position: relative;
+  border: 1px solid #545454;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.message-board__row{
+	width: 100%;
+	height: 12.5%;
+	margin: 5px 0;
+}
+
+.message-board__row > *{
+	display: inline-block;
+	float: left;
+}
+
+.message-board__row > *:after{
+	content: " ";
+	clear: both;
+}
+
+.message-board__user{
+	max-width: 20%;
+	font-size: 0.8125rem;
+	font-weight: bold;
+}
+.message-board__comment{
+	margin: 0 0 0 10px;
+	max-width: 80%;
+	font-size: 0.6875rem;
+	height: 100%;
+  	overflow: hidden;
+}
+
+.message-board__footer{
+	height: auto;
+	position: relative;
+}
+

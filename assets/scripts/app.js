@@ -58,6 +58,11 @@ $('.modal__close.modal__close-review').click(function(e){
 	$('.modal-review').toggleClass('modal--visible');
 });
 
+$('.modal__close--board').click(function(e){
+	e.preventDefault();
+	$('.message-board').toggleClass('message-board--visible');
+});
+
 $('#login-btn').click(function(e){
 	e.preventDefault();
 	addModal("login");
@@ -67,6 +72,11 @@ $('#login-btn').click(function(e){
 $('#review-book').click(function(e){
 	e.preventDefault();
 	$('.modal-review').toggleClass('modal--visible');
+});
+
+$('#discuss-book').click(function(e){
+	e.preventDefault();
+	$('.message-board').toggleClass('message-board--visible');
 });
 
 $('#add-book').click(function(e){
@@ -79,4 +89,14 @@ $('#update-profile').click(function(e){
 	e.preventDefault();
 	addModal("update_p");
 	$('.modal').toggleClass('modal--visible');
+});
+
+$('.header__profile-btn button').click(function(e){
+	e.preventDefault();
+	if(window.location.href.match(/pages/g)){
+		window.location.href = "profile.php";
+	}
+	else{
+		window.location.href = "./pages/profile.php";
+	}
 });
