@@ -90,3 +90,13 @@ $('#update-profile').click(function(e){
 	addModal("update_p");
 	$('.modal').toggleClass('modal--visible');
 });
+
+$('.header__profile-btn button').click(function(e){
+	e.preventDefault();
+	if(window.location.href.match(/pages/g)){
+		window.location.href = "profile.php";
+	}
+	else{
+		window.location.href = "./pages/profile.php";
+	}
+});
