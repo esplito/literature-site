@@ -9,32 +9,7 @@
 	<link href="../assets/styles/styles.css" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<div class="header wrapper">
-			<div class="header__logo-holder">
-				<a class="header__logo" href="#">
-					<h1 class="header__title">kursbok.se</h1>
-				</a>
-			</div>
-			<div class="header__search">
-				<form class="header__search__form">
-					<input type="text" placeholder="Sök bland omdömen på massor av kursböcker!" class="header__search-box">
-					<div class="header__search-btn">
-						<button type="submit"><i class="fa fa-search"></i></button>
-					</div>
-				</form>
-			</div>
-			<div class="header__user">
-				<div class="header__login">
-					<a href="#" id="login-btn">Logga in</a>
-				</div>
-				<!-- Profil-knapp när man är inloggad -->
-				<!-- <div class="header__profile-btn">
-					<button><i class="fa fa-user-circle"></i></button>
-				</div> -->
-			</div>
-		</div>
-	</header>
+<?php include '../include/header.php'; ?>
 	<div class="container">
 		<div class="wrapper__body">
 			<div class="section__row">
@@ -61,7 +36,7 @@
 					</div>
 				</div>
 				<div class="section__col-8 section__col--padding-l">
-					<div class="section__row section__row--align-l">
+					<!--<div class="section__row section__row--align-l">
 						<h2>Mina böcker</h2>
 						<div id="my-books">
 							<div class="section__row section__row--s-margin">
@@ -83,7 +58,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div>-->
 					<div class="section__row section__row--align-l">
 						<h2>Mina omdömen</h2>
 						<div id="my-reviews">
