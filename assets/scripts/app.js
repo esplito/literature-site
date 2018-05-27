@@ -30,7 +30,7 @@ function addModal(modal_type){
 	}
 }
 
-function removeModalContent(alt){
+function removeModalContent(){
 	$('.modal:not(.modal-review) .modal__inner').html(function(){
 			return "";
 	});
@@ -67,4 +67,16 @@ $('#login-btn').click(function(e){
 $('#review-book').click(function(e){
 	e.preventDefault();
 	$('.modal-review').toggleClass('modal--visible');
+});
+
+$('#add-book').click(function(e){
+	e.preventDefault();
+	addModal("add_book_db");
+	$('.modal').toggleClass('modal--visible');
+});
+
+$('#update-profile').click(function(e){
+	e.preventDefault();
+	addModal("update_p");
+	$('.modal').toggleClass('modal--visible');
 });

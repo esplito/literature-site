@@ -7,6 +7,7 @@
 	<!-- Font Awesome Icon Library -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="../assets/styles/styles.css" rel="stylesheet">
+	<script src="../assets/scripts/jquery.js" type="text/javascript"></script>
 </head>
 <body>
 <?php include '../include/header.php'; ?>
@@ -28,11 +29,15 @@
 							</div>
 						</div>
 						<div class="user__row">
-							<button class="btn btn--default btn--a-full-w">Lägg till bok</button>
+							<button class="btn btn--default btn--a-full-w" id="add-book">Lägg till bok</button>
 						</div>
 						<div class="user__row">
-							<button class="btn btn--default btn--a-full-w">Uppdatera profil</button>
+							<button class="btn btn--default btn--a-full-w" id="update-profile">Uppdatera profil</button>
 						</div>
+						<!-- Knapp som ska länka till 'remove_acc.php'
+						<div class="user__row">
+							<button class="btn btn--default btn--a-full-w" id="admin-accounts" href="#">Administrera användare</button>
+						</div> -->
 					</div>
 				</div>
 				<div class="section__col-8 section__col--padding-l">
@@ -104,5 +109,12 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal">
+		<div class="modal__inner">
+		<!-- modal content here -->
+		</div>
+		<div class="modal__close">X</div>
+	</div>
+	<script src="../assets/scripts/app.js" type="text/javascript"></script>
 </body>
 </html>
