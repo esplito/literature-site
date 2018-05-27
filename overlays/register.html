@@ -1,5 +1,5 @@
 <h1 class="modal__title">Registrera dig på kursbok.se</h1>
-<form class="form" id="register">
+<form class="form" method="POST" action="./assets/php/register-process.php" id="register">
 	<div class="form__row">
 		<label class="label label--default">Email</label>
 		<input type="email" placeholder="Skriv din email här..." name="register-email">
@@ -20,3 +20,8 @@
 	<label class="label label--centered">Har du redan ett konto?</label>
 	<button class="btn btn--default" id="m-login-btn" onclick="addModal('login')">Logga in</button>
 </div>
+<script type="text/javascript">
+	if(window.location.href.match(/pages/g)){
+		$('#register').attr('action', '../assets/php/register-process.php');
+	}
+</script>

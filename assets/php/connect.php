@@ -11,8 +11,7 @@
 		die("Connection failed: ".$connection.connect_error);
 	}
 	echo "Connection worked.";
-	}
 }
 
-?>	
 
+?>
