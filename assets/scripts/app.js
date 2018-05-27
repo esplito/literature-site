@@ -14,15 +14,24 @@ function resetStars(){
 }
 
 function addModal(modal_type){
-	$.get('./overlays/' + modal_type +'.html', null, function(text){
-		$('.modal__inner').html(function(){
-			return text;
+	if(window.location.href.match(/pages/g)){
+		$.get('../overlays/' + modal_type +'.html', null, function(text){
+			$('.modal:not(.modal-review) .modal__inner').html(function(){
+				return text;
+			});
 		});
-	});
+	}
+	else{
+		$.get('./overlays/' + modal_type +'.html', null, function(text){
+			$('.modal:not(.modal-review) .modal__inner').html(function(){
+				return text;
+			});
+		});
+	}
 }
 
-function removeModalContent(){
-	$('.modal__inner').html(function(){
+function removeModalContent(alt){
+	$('.modal:not(.modal-review) .modal__inner').html(function(){
 			return "";
 	});
 }
@@ -38,14 +47,24 @@ $('.modal .stars__star').click(function(e) {
     return false;
 });
 
-$('.modal__close').click(function(e) {
+$('.modal__close:not(.modal__close-review)').click(function(e) {
 	e.preventDefault();
-	$('.modal').toggleClass('modal--visible');
+	$('.modal:not(.modal-review)').toggleClass('modal--visible');
 	removeModalContent();
+});
+
+$('.modal__close.modal__close-review').click(function(e){
+	e.preventDefault();
+	$('.modal-review').toggleClass('modal--visible');
 });
 
 $('#login-btn').click(function(e){
 	e.preventDefault();
 	addModal("login");
-	$('.modal').toggleClass('modal--visible');
+	$('.modal:not(.modal-review)').toggleClass('modal--visible');
+});
+
+$('#review-book').click(function(e){
+	e.preventDefault();
+	$('.modal-review').toggleClass('modal--visible');
 });
