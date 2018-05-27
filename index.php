@@ -7,6 +7,7 @@
 	<!-- Font Awesome Icon Library -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="./assets/styles/styles.css" rel="stylesheet">
+	<script src="./assets/scripts/jquery.js" type="text/javascript"></script>
 </head>
 <body>
 	<header>
@@ -88,5 +89,12 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal">
+		<div class="modal__inner">
+		<!-- modal content here -->
+		</div>
+		<div class="modal__close">X</div>
+	</div>
+	<script src="./assets/scripts/app.js" type="text/javascript"></script>
 </body>
 </html>
