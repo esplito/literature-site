@@ -9,4 +9,5 @@ $sql = "INSERT INTO user_table (user_uname, user_email, user_password, user_leve
 $result = $connection->query($sql);
 $connection->close();
 
+header('Location: ../../index.php')
  ?>

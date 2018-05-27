@@ -31,6 +31,16 @@
       <div class="header__profile-btn">
         <button><i class="fa fa-user-circle"></i></button>
       </div>
+      <div class="header__logout">
+        <a href="./assets/php/logout-process.php" id="logout-btn">Logga ut</a>
+      </div>
+      <script type="text/javascript">
+      	if(window.location.href.match(/pages/g)){
+      		$('#logout-btn').attr('href', '../assets/php/logout-process.php');
+      	}
+      </script>
+
+
     <?php endif;
     ?>
     </div>

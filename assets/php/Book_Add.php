@@ -13,7 +13,7 @@ $addBook = $_POST['addBook'];
 	{
 		if($ISBN!=""&&$title!=""&&$author!=""&&$edition!=""&&$released_year!="") 
 		{
-			$insert = $connection -> query("INSERT INTO Book_Table (ISBN, title, author, edition, released_year, book_picture) VALUES ('".$ISBN."','".$title."','".$author."','".$edition."','".$released_year."',"LOAD_FILE($book_picture)")");
+			$insert = $connection -> query("INSERT INTO book_table (book_ISBN, book_title, book_author, book_edition, book_released_year, book_picture) VALUES ('".$ISBN."','".$title."','".$author."','".$edition."','".$released_year."',"LOAD_FILE($book_picture)")");
 		}
 		else 
 		{

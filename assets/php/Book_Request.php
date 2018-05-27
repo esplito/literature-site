@@ -4,13 +4,17 @@ require('connect.php');
 	//create a "eventlisener" for "search action"
 	$get_title = $connection-> (???['Search']);
 
-	$get_ISBN = $connection-> query("SELECT * ISBN FROM Book_Table WHERE title = '$get_title'");
+	$get_ISBN = $connection-> query("SELECT * book_ISBN FROM book_table WHERE book_title = '$get_title'");
+	//$get_ISBN = $connection-> query("SELECT * book_ISBN FROM book_table JOIN book_table ON book_table.book_title = '$get_title'.book_book_title");
 
-	$get_book_query = $connection-> query("SELECT ISBN, title, author, edition, released_year FROM Book_Table WHERE ISBN = '$get_ISBN'");
+	$get_book_query = $connection-> query("SELECT book_ISBN, book_title, book_author, book_edition, book_released_year, book_picture FROM book_table WHERE book_ISBN = '$get_ISBN'");
+	//$get_book_query = $connection-> query("SELECT book_ISBN, book_title, book_author, book_edition, book_released_year, book_picture FROM book_table JOIN book_table ON book_table.book_ISBN = '$get_ISBN'.book_ISBN");
 
-	$get_review_query = $connection -> query("SELECT r_comment, rating_by_user FROM Review_Table WHERE ISBN = '$get_ISBN' ");
+	$get_review_query = $connection -> query("SELECT review_comment, rating_by_user FROM review_table WHERE book_ISBN = '$get_ISBN' ");
 
-	$get_comment_query = $connection -> query("SELECT kommentar FROM comment_table ORDER BY com_id")
+	//$get_review_query = $connection -> query("SELECT review_comment, rating_by_user FROM review_table JOIN review_table ON review_table.book_ISBN = '$get_ISBN'.book_ISBN ");
+
+	$get_comment_query = $connection -> query("SELECT comment_commet FROM comment_table ORDER BY comment_id");
 
 
 	if($get_book_query === FALSE || $get_review_query === FALSE || $get_comment_query === FALSE) { 
@@ -19,13 +23,14 @@ require('connect.php');
 
 	while($row = mysqli_fetch_array($get_book_query))
 		{
-  		$ISBN=$row['ISBN'];	
-		$title=$row['title'];	
-		$author=$row['author'];	
-		$edition=$row['edition'];
-		$released_year=$row['released_year'];	
+  		$ISBN=$row['book_ISBN'];	
+		$title=$row['book_title'];	
+		$author=$row['book_author'];	
+		$edition=$row['book_edition'];
+		$released_year=$row['book_released_year'];	
+		$picture=$row['book_picture'];
 			
-		echo $ISBN .", ". $title .", ". $author .", ". $edition .", ". $released_year.'<br />';
+		echo $ISBN .", ". $title .", ". $author .", ". $edition .", ". $released_year.", ". $picture.'<br />';
 		}
 
 	while($row = mysqli_fetch_array($get_review_query))

@@ -4,17 +4,15 @@ require('connect.php');
 $user_uname = $connection->real_escape_string($_POST['user_uname']);
 $user_email = $connection->real_escape_string($_POST['user_email']);
 $user_password = $connection->real_escape_string($_POST['user_password']);
-$user_first = $connection->real_escape_string($_POST['user_first']);
-$user_last = $connection->real_escape_string($_POST['user_last']);
 $user_school = $connection->real_escape_string($_POST['user_school']);
 $user_picture = $connection->real_escape_string($_POST['user_picture']);
 $createAcc = $_POST['createAcc'];
 
 	if ($createAcc) 
 	{
-		if($user_uname!=""&&$user_email!=""&&$user_password!=""&&$user_first!=""&&$user_last!="") 
+		if($user_uname!=""&&$user_email!=""&&$user_password!="") 
 		{
-			$insert = $connection -> query("INSERT INTO User_Table (user_uname, user_email, user_password, user_first, user_last, user_school, user_picture, user_level) VALUES ('".$user_uname."','".$user_email."','".$user_password."','".$user_first."','".$user_last."','".$user_school."',"LOAD_FILE($user_picture)",'1')");
+			$insert = $connection -> query("INSERT INTO user_table (user_uname, user_email, user_password, user_school, user_picture, user_level) VALUES ('".$user_uname."','".$user_email."','".$user_password."','".$user_school."',"LOAD_FILE($user_picture)",'1')");
 
 		}
 		else 
@@ -24,4 +22,4 @@ $createAcc = $_POST['createAcc'];
 	}
 
 
-?>
+?>			
