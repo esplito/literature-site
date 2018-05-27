@@ -58,6 +58,11 @@ $('.modal__close.modal__close-review').click(function(e){
 	$('.modal-review').toggleClass('modal--visible');
 });
 
+$('.modal__close--board').click(function(e){
+	e.preventDefault();
+	$('.message-board').toggleClass('message-board--visible');
+});
+
 $('#login-btn').click(function(e){
 	e.preventDefault();
 	addModal("login");
@@ -67,6 +72,11 @@ $('#login-btn').click(function(e){
 $('#review-book').click(function(e){
 	e.preventDefault();
 	$('.modal-review').toggleClass('modal--visible');
+});
+
+$('#discuss-book').click(function(e){
+	e.preventDefault();
+	$('.message-board').toggleClass('message-board--visible');
 });
 
 $('#add-book').click(function(e){
