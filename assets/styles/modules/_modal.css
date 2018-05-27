@@ -1,10 +1,11 @@
 .modal{
 	z-index: 99;
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: rgba(255, 255, 255, 0.96);
 	height: 100%;
 	width: 100%;
 	position: absolute;
 	top: 0;
+	display: none;
 }
 
 .modal__inner{
@@ -30,4 +31,8 @@
 	transform-origin: 100% 0;
 	color: #FF3B3F;
 	cursor: pointer;
+}
+
+.modal--visible{
+	display: block;
 }

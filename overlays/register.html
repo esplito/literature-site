@@ -1,0 +1,22 @@
+<h1 class="modal__title">Registrera dig på kursbok.se</h1>
+<form class="form" id="register">
+	<div class="form__row">
+		<label class="label label--default">Email</label>
+		<input type="email" placeholder="Skriv din email här..." name="register-email">
+	</div>
+	<div class="form__row">
+		<label class="label label--default">Användarnamn</label>
+		<input type="text" placeholder="Skriv ditt användarnamn här..." name="register-username">
+	</div>
+	<div class="form__row">
+		<label class="label label--default">Lösenord</label>
+		<input type="password" placeholder="Skriv ditt lösenord här..." name="register-password">
+	</div>
+	<div class="form__row form__row--btn">
+		<button class="btn btn--default btn--green" type="submit">Skapa konto</button>
+	</div>
+</form>
+<div class="modal__alt">
+	<label class="label label--centered">Har du redan ett konto?</label>
+	<button class="btn btn--default" id="m-login-btn" onclick="addModal('login')">Logga in</button>
+</div>
