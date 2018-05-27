@@ -1,8 +1,6 @@
 <?php session_start();
-      //Testar funktionalitet:
-      $_SESSION['user'] = "esplito";
-      //session_destroy();
- ?>
+
+?>
 
 <header>
   <div class="header wrapper">
@@ -26,6 +24,7 @@
       <div class="header__login">
         <a href="#" id="login-btn">Logga in</a>
       </div>
+
     <?php
       else:
     ?>

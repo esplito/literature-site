@@ -7,34 +7,10 @@
 	<!-- Font Awesome Icon Library -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="../assets/styles/styles.css" rel="stylesheet">
+	<script src="../assets/scripts/jquery.js" type="text/javascript"></script>
 </head>
 <body>
-	<header>
-		<div class="header wrapper">
-			<div class="header__logo-holder">
-				<a class="header__logo" href="#">
-					<h1 class="header__title">kursbok.se</h1>
-				</a>
-			</div>
-			<div class="header__search">
-				<form class="header__search__form">
-					<input type="text" placeholder="Sök bland omdömen på massor av kursböcker!" class="header__search-box">
-					<div class="header__search-btn">
-						<button type="submit"><i class="fa fa-search"></i></button>
-					</div>
-				</form>
-			</div>
-			<div class="header__user">
-				<div class="header__login">
-					<a href="#" id="login-btn">Logga in</a>
-				</div>
-				<!-- Profil-knapp när man är inloggad -->
-				<!-- <div class="header__profile-btn">
-					<button><i class="fa fa-user-circle"></i></button>
-				</div> -->
-			</div>
-		</div>
-	</header>
+<?php include '../include/header.php'; ?>
 	<div class="container">
 		<div class="wrapper__body">
 			<div class="section__row section__row--align-l">
@@ -44,8 +20,8 @@
 				<div class="section__col-4 section__col-4--left">
 					<div class="book">
 						<img class="img__book--large" src="../assets/images/business-information-systems.jpg">
-						<button class="btn btn--default btn--add-review">Ge omdöme</button>
-						<button class="btn btn--default btn--add-review" id="discuss">Diskutera</button>
+						<button class="btn btn--default btn--add-review" id="review-book">Ge omdöme</button>
+						<button class="btn btn--default btn--add-review" id="discuss-book">Diskutera</button>
 					</div>
 				</div>
 				<div class="section__col-8">
@@ -134,5 +110,35 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal modal-review">
+		<div class="modal__inner">
+		<h1 class="modal__title">Lägg till omdöme</h1>
+			<form class="form" id="save-review">
+				<div class="form__row">
+					<div class="stars">
+						<span class="stars__star stars__star--bigger fa fa-star" data-rating="1"></span>
+						<span class="stars__star stars__star--bigger fa fa-star" data-rating="2"></span>
+						<span class="stars__star stars__star--bigger fa fa-star" data-rating="3"></span>
+						<span class="stars__star stars__star--bigger fa fa-star" data-rating="4"></span>
+						<span class="stars__star stars__star--bigger fa fa-star" data-rating="5"></span>
+					</div>
+				</div>
+				<div class="form__row">
+					<label class="label label--default">Kommentar</label>
+					<input type="text" placeholder="Skriv en kort kommentar om boken här..." name="review-title">
+				</div>
+				<div class="form__row form__row--btn">
+					<button class="btn btn--default btn--green" type="submit">Spara omdöme</button>
+				</div>
+			</form>
+		</div>
+		<div class="modal__close modal__close-review">X</div>
+	</div>
+	<div class="modal">
+		<div class="modal__inner">
+		</div>
+		<div class="modal__close">X</div>
+	</div>
+	<script src="../assets/scripts/app.js" type="text/javascript"></script>
 </body>
 </html>
