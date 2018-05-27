@@ -10,18 +10,20 @@
 	<script src="../assets/scripts/jquery.js" type="text/javascript"></script>
 </head>
 <body>
-<?php include '../include/header.php'; ?>
+<?php
+include '../include/header.php';
+?>
 	<div class="container">
 		<div class="wrapper__body">
 			<div class="section__row">
 				<div class="section__col-4 section__col-4--left">
 					<div class="user">
 						<img class="user__image" src="../assets/images/profile_pic.png">
-						<h3>whatthealgo</h3>
+						<h3><?php echo $_SESSION["user"];?></h3>
 						<div class="user__info">
 							<div class="user__row">
 								<label class="label label--attribute">Skola: </label>
-								<span class="user__info__school">Uppsala universitet</span>
+								<span class="user__info__school"><?php echo $_SESSION["user_school"]; ?></span>
 							</div>
 							<div class="user__row">
 								<label class="label label--attribute">Antal omdömen: </label>
