@@ -5,8 +5,8 @@
 <header>
   <div class="header wrapper">
     <div class="header__logo-holder">
-      <a class="header__logo" href="#">
-        <h1 class="header__title">kursbok.se</h1>
+      <a class="header__logo" href="http://localhost/literature-site/index.php">
+        <h1 class="header__title" id="startpage-btn">kursbok.se</h1>
       </a>
     </div>
     <div class="header__search">
@@ -39,8 +39,6 @@
       		$('#logout-btn').attr('href', '../assets/php/logout-process.php');
       	}
       </script>
-
-
     <?php endif;
     ?>
     </div>
