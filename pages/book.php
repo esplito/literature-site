@@ -1,7 +1,6 @@
 <?php
 require('../assets/php/BookPage/book_info.php');
 
-
 ?>
 	<meta charset="UTF-8">
 	<title>Kursbok</title>
@@ -24,8 +23,13 @@ require('../assets/php/BookPage/book_info.php');
 				<div class="section__col-4 section__col-4--left">
 					<div class="book">
 						<img class="img__book--large" src="../assets/images/business-information-systems.jpg">
+						<?php
+					      if(isset($_SESSION['user'])):
+					    ?>
 						<button class="btn btn--default btn--add-review" id="review-book">Ge omdöme</button>
 						<button class="btn btn--default btn--add-review" id="discuss-book">Diskutera</button>
+						<?php endif;
+   						?>
 					</div>
 				</div>
 				<div class="section__col-8">
