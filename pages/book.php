@@ -79,10 +79,15 @@ require('../assets/php/BookPage/book_info.php');
 			</div>
 		</div>
 	</div>
+	<?php
+      if(isset($_SESSION['user'])):
+    ?>
 	<div class="modal modal-review">
 		<div class="modal__inner">
 		<h1 class="modal__title">Lägg till omdöme</h1>
 			<form class="form" method="POST" action="../assets/php/add_review.php" id="save-review">
+				<input type="hidden" name="b-isbn" value="<?php echo $ISBN ?>" />
+				<input type="hidden" name="review-rating" value="0" />
 				<div class="form__row">
 					<div class="stars">
 						<span class="stars__star stars__star--bigger fa fa-star" data-rating="1"></span>
@@ -103,6 +108,8 @@ require('../assets/php/BookPage/book_info.php');
 		</div>
 		<div class="modal__close modal__close-review">X</div>
 	</div>
+	<?php endif;
+   	?>
 	<!-- För att logga in -->
 	<div class="modal">
 		<div class="modal__inner">
