@@ -22,7 +22,8 @@ if ($row = $result->fetch_assoc()){
       $_SESSION['user_level'] = $row['user_level'];
     }
   }
-  header('Location: ../../index.php');
+  //Redirect to previous page (Example if you login at results.php, you will stay there.)
+  header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 
 
