@@ -18,6 +18,9 @@
       </div>
       <div class="section__row">
         <div class="section__col-12">
+					<?php
+					include "../assets/php/remove_acc.php";
+					?>
           <div class="user__row section__row--align-l">
             <div class="user__image-holder f-left">
               <a href="#">
