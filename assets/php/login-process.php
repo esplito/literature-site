@@ -5,11 +5,12 @@ session_start();
 $email = mysqli_real_escape_string($connection, $_POST['login-email']);
 $password = mysqli_real_escape_string($connection, $_POST['login-password']);
 
-$sql = "SELECT user_uname FROM user_table WHERE user_email = '$email' AND user_password = '$password'";
+$sql = "SELECT user_uname, user_id FROM user_table WHERE user_email = '$email' AND user_password = '$password'";
 $result = mysqli_query($connection,$sql);
 
 if ($row = $result->fetch_assoc()){
   $_SESSION['user'] = $row['user_uname'];
+  $_SESSION['userID'] = $row['user_id'];
   if (isset($_SESSION['user'])) {
     $sessionUname = $_SESSION['user'];
     $sqlprofile = "SELECT user_id, user_school, user_picture, user_level FROM user_table WHERE user_uname = '$sessionUname'";

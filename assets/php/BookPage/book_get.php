@@ -1,5 +1,5 @@
 <?php
-require('book_info.php');
+require('../assets/php/BookPage/book_info.php');
 
 
 ?>
@@ -8,13 +8,13 @@ require('book_info.php');
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Montserrat:400,700" rel="stylesheet">
 	<!-- Font Awesome Icon Library -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="../../../assets/styles/styles.css" rel="stylesheet">
-	<script src="../../../assets/scripts/jquery.js" type="text/javascript"></script>
+	<link href="../assets/styles/styles.css" rel="stylesheet">
+	<script src="../assets/scripts/jquery.js" type="text/javascript"></script>
 
 
 </head>
 <body>
-<?php include '../../../include/header.php'; ?>
+<?php include '../include/header.php'; ?>
 	<div class="container">
 		<div class="wrapper__body">
 			<div class="section__row section__row--align-l">
@@ -69,7 +69,7 @@ require('book_info.php');
 				<h2>Omdömen</h2>
 				<div class="section__col-12 book__reviews">
 					<?php
-					include "book_review.php"
+					include "../assets/php/BookPage/book_review.php"
 					?>			
 				</div>
 			</div>
@@ -105,7 +105,7 @@ require('book_info.php');
 		</div>
 		<div class="modal__close">X</div>
 	</div>
-	<?php include '../../../overlays/message_board.php' ?>
+	<?php include '../overlays/message_board.php' ?>
 	<script src="../assets/scripts/app.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
+<?php
+require('../assets/php/BookPage/book_info.php');
+
+?>
 	<meta charset="UTF-8">
 	<title>Kursbok</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Montserrat:400,700" rel="stylesheet">
@@ -9,48 +10,59 @@
 	<link href="../assets/styles/styles.css" rel="stylesheet">
 	<script src="../assets/scripts/jquery.js" type="text/javascript"></script>
 
+
 </head>
 <body>
 <?php include '../include/header.php'; ?>
 	<div class="container">
 		<div class="wrapper__body">
 			<div class="section__row section__row--align-l">
-				<a href="#" class="section__back-link">Tillbaka till sökresultat</a>
+				<!-- <a href="#" class="section__back-link">Tillbaka till sökresultat</a> -->
 			</div>
 			<div class="section__row">
 				<div class="section__col-4 section__col-4--left">
 					<div class="book">
 						<img class="img__book--large" src="../assets/images/business-information-systems.jpg">
+						<?php
+					      if(isset($_SESSION['user'])):
+					    ?>
 						<button class="btn btn--default btn--add-review" id="review-book">Ge omdöme</button>
 						<button class="btn btn--default btn--add-review" id="discuss-book">Diskutera</button>
+						<?php endif;
+   						?>
 					</div>
 				</div>
 				<div class="section__col-8">
 					<div class="section__row section__row--align-l">
-						<h3 class="book__title">Business Information Systems</h3>
-						<p class="book__author">av <span id="author">Paul Beynon-Davies</span></p>
+						<h3 class="book__title">
+							<?php echo($title)?>
+						</h3>
+						<p class="book__author">av <span id="author">	
+							<?php echo($author)?></span></p>
 						<div class="book__details">
 							<div class="section__row section__row--s-margin">
 								<div class="rating">
-									<span class="stars__star fa fa-star stars__star--checked"></span>
-									<span class="stars__star fa fa-star"></span>
-									<span class="stars__star fa fa-star"></span>
-									<span class="stars__star fa fa-star"></span>
-									<span class="stars__star fa fa-star"></span>
+									<?php include "../assets/php/BookPage/book_review_avg.php" ?>
 								</div>
 							</div>
 							<div class="section__row section__row--s-margin">
 								<p class="book__details__info">
 									<span class="label label--attribute">Upplaga: </span>
-									<span>2:a</span>
+									<span>
+											<?php echo($edition)?>
+									</span>
 								</p>
 								<p class="book__details__info">
 									<span class="label label--attribute">ISBN: </span>
-									<span>9781137265807</span>
+									<span>
+											<?php echo($ISBN)?>
+									</span>
 								</p>
 								<p class="book__details__info">
 									<span class="label label--attribute">Utgiven: </span>
-									<span>2013</span>
+									<span>
+											<?php echo($released_year)?>
+									</span>
 								</p>
 							</div>
 						</div>
@@ -60,61 +72,22 @@
 			<div class="section__row section__row--align-l">
 				<h2>Omdömen</h2>
 				<div class="section__col-12 book__reviews">
-					<div class="section__row section__row--align-l section__row--review">
-						<div class="rating rating--no-margin-t">
-							<span class="stars__star fa fa-star stars__star--checked"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-						</div>
-						<div class="book__reviews__comment">
-							<span class="label">Vilken bok! NOT.</span>
-						</div>
-						<div class="book__reviews__user">
-							<span class="label label--smaller">whatthealgo</span>
-						</div>
-					</div>
-					<div class="section__divider"></div>
-					<div class="section__row section__row--align-l section__row--review">
-						<div class="rating rating--no-margin-t">
-							<span class="stars__star fa fa-star stars__star--checked"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-						</div>
-						<div class="book__reviews__comment">
-							<span class="label">Inge vidare!</span>
-						</div>
-						<div class="book__reviews__user">
-							<span class="label label--smaller">booksarelife</span>
-						</div>
-					</div>
-					<div class="section__divider"></div>
-					<div class="section__row section__row--align-l section__row--review section__row--last">
-						<div class="rating rating--no-margin-t">
-							<span class="stars__star fa fa-star stars__star--checked"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-						</div>
-						<div class="book__reviews__comment">
-							<span class="label">Oh no...</span>
-						</div>
-						<div class="book__reviews__user">
-							<span class="label label--smaller">whatdidyousay</span>
-						</div>
-					</div>
+					<?php
+					include "../assets/php/BookPage/book_review.php"
+					?>			
 				</div>
 			</div>
 		</div>
 	</div>
+	<?php
+      if(isset($_SESSION['user'])):
+    ?>
 	<div class="modal modal-review">
 		<div class="modal__inner">
 		<h1 class="modal__title">Lägg till omdöme</h1>
 			<form class="form" method="POST" action="../assets/php/add_review.php" id="save-review">
+				<input type="hidden" name="b-isbn" value="<?php echo $ISBN ?>" />
+				<input type="hidden" name="review-rating" value="0" />
 				<div class="form__row">
 					<div class="stars">
 						<span class="stars__star stars__star--bigger fa fa-star" data-rating="1"></span>
@@ -135,6 +108,8 @@
 		</div>
 		<div class="modal__close modal__close-review">X</div>
 	</div>
+	<?php endif;
+   	?>
 	<!-- För att logga in -->
 	<div class="modal">
 		<div class="modal__inner">

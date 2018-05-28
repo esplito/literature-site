@@ -36,6 +36,10 @@ function removeModalContent(){
 	});
 }
 
+function setReviewRating(rating){
+	$('.modal [name="review-rating"]').val(rating);
+}
+
 var rating = 0;
 
 $('.modal .stars__star').click(function(e) {
@@ -44,6 +48,7 @@ $('.modal .stars__star').click(function(e) {
     rating = currentStar.getAttribute('data-rating');
     resetStars();
     setStars(currentStar.getAttribute('data-rating'));
+    setReviewRating($('.modal .stars__star--checked').length);
     return false;
 });
 

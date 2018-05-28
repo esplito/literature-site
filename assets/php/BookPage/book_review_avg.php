@@ -1,9 +1,9 @@
 <?php
 require('connect.php');
 
-$get_title = "Systems Analysis and Design";
+$get_isbn = $_GET['b'];
 //	//$get_title = $connection->real_escape_string($_POST['']);
-$get_review_query = "SELECT ROUND(AVG(rating_by_user),0) AS avg_rate FROM review_table JOIN book_table WHERE book_title = '$get_title'";
+$get_review_query = "SELECT ROUND(AVG(rating_by_user),0) AS avg_rate FROM review_table JOIN book_table WHERE review_table.book_ISBN = '$get_isbn'";
 $result = $connection ->query($get_review_query);
 
 	if($get_review_query === FALSE) { 
@@ -23,8 +23,7 @@ if($AVG==5) {
 	<span class='stars__star fa fa-star stars__star--checked'></span>
 	<span class='stars__star fa fa-star stars__star--checked'></span>
 	<span class='stars__star fa fa-star stars__star--checked'></span>
-	<span class='stars__star fa fa-star stars__star--checked'></span>
-	<span class='stars__star fa fa-star'></span>";
+	<span class='stars__star fa fa-star stars__star--checked'></span>";
 }
 elseif($AVG==4) {
 
@@ -56,7 +55,7 @@ elseif($AVG==1){
 	<span class='stars__star fa fa-star'></span>
 	<span class='stars__star fa fa-star'></span>
 	<span class='stars__star fa fa-star'></span>
-	<span class='stars__star fa fa-star'></span>>";	
+	<span class='stars__star fa fa-star'></span>";	
 }
 elseif($AVG==0){
 
