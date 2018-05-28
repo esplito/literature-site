@@ -4,10 +4,8 @@
 
     if(isset($_POST['show__all-btn'])){
 
+    //Hämtar från databas
     $sql = "SELECT ROUND(AVG(rating_by_user), 0) AS average, highest.book_ISBN,book_title,book_picture, book_releashed_year, review_table.rating_by_user FROM book_table AS highest JOIN review_table ON review_table.book_ISBN = highest.book_ISBN GROUP BY highest.book_ISBN ORDER BY average DESC";
-
-    //Emils $sql = "SELECT ROUND(AVG(rating_by_user), 0) AS average, highest.book_ISBN, book_table.book_title, book_table.book_picture, book_table.book_releashed_year FROM review_table AS highest JOIN book_table ON book_table.book_ISBN = highest.book_ISBN GROUP BY highest.book_ISBN ORDER BY average DESC";
-
     $result = mysqli_query($connection, $sql);
 
     while($rows = $result ->fetch_assoc()){
@@ -20,8 +18,8 @@
 
     echo '<div class="section__book">';
     echo '<div class="img__book">';
-    echo '<a href="../pages/book.php?b="' . $bookISBN . '>';
-    echo '<img src="../assets/images/' . $picturerow . 'class="img__book--small">';
+    echo '<a href="../pages/book.php?b=' . $bookISBN . '">';
+    echo '<img src="../assets/images/' . $picturerow . ' class="img__book--small">';
     echo '</a>';
     echo '</div>';
     echo '<div class="section__bookinfo">';
@@ -29,6 +27,7 @@
     echo '<p class="label--tiny">' . $releaserow . '</p>';
     echo '<div class="rating__small">';
 
+    //Kikar vilket betyg boken har, och echoar ut respektive. 
     if($avg==5) {
       echo '<span class="stars__star fa fa-star stars__star--checked"></span>
       <span class="stars__star fa fa-star stars__star--checked"></span>
