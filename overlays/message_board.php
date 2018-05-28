@@ -16,16 +16,13 @@
 		</div>
 	</div>
 	<div class="message-board__footer">
-		<form class="form" id="message_submit">
+		<form class="form" method="post" action="../assets/php/messageBoard-process.php" id="message_submit">
 	        <div class="form__row form__row--message">
 	          <label class="label label--default">Meddelande</label>
-	          <textarea  type="text" placeholder="Skriv ditt meddelande här..." name="review-title" maxlength="100"></textarea>
-	          <button class="btn btn--smaller btn--white" type="submit">Skicka</button>
+	          <textarea  type="text" placeholder="Skriv ditt meddelande här..." name="message" maxlength="100"></textarea>
+	          <button class="btn btn--smaller btn--white" name="submit" type="submit">Skicka</button>
 	        </div>
 		</form>
 	</div>
 	<div class="modal__close--board">X</div>
 </div>
-
-
-

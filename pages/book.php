@@ -126,7 +126,7 @@
 				</div>
 				<div class="form__row">
 					<label class="label label--default">Kommentar</label>
-					<input type="text" placeholder="Skriv en kort kommentar om boken här..." name="review-title">
+					<input type="text" placeholder="Skriv en kort kommentar om boken här..." name="review-comment">
 				</div>
 				<div class="form__row form__row--btn">
 					<button class="btn btn--default btn--green" name="submit" type="submit">Spara omdöme</button>
