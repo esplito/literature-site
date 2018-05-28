@@ -129,7 +129,7 @@
 					<input type="text" placeholder="Skriv en kort kommentar om boken här..." name="review-title">
 				</div>
 				<div class="form__row form__row--btn">
-					<button class="btn btn--default btn--green" type="submit">Spara omdöme</button>
+					<button class="btn btn--default btn--green" name="submit" type="submit">Spara omdöme</button>
 				</div>
 			</form>
 		</div>

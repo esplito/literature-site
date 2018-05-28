@@ -13,6 +13,7 @@ $bookRating = //Läs in hur många stjärnor som är ifyllda.
 $review= mysqli_real_escape_string($connection, $_POST['review-title']);
 
 $insertreview = "INSERT INTO review_table (book_ISBN, user_id, review_comment, rating_by_user) VALUES ('$bookISBN','$userID','$author','$review','$released_year')";
+var_dump($instertreview);
 $reviewresult = $connection->query($insertreview);
 $connection ->close();
 
