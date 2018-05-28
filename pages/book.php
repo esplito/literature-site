@@ -79,6 +79,9 @@ require('../assets/php/BookPage/book_info.php');
 			</div>
 		</div>
 	</div>
+	<?php
+      if(isset($_SESSION['user'])):
+    ?>
 	<div class="modal modal-review">
 		<div class="modal__inner">
 		<h1 class="modal__title">Lägg till omdöme</h1>
@@ -105,6 +108,8 @@ require('../assets/php/BookPage/book_info.php');
 		</div>
 		<div class="modal__close modal__close-review">X</div>
 	</div>
+	<?php endif;
+   	?>
 	<!-- För att logga in -->
 	<div class="modal">
 		<div class="modal__inner">
