@@ -15,6 +15,8 @@ require('connect.php');
 		$kommentar=$row['comment_comment'];
 
 		return $kommentar. '<br />';
+
+		
 		}
 
 ?>
