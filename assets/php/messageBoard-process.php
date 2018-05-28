@@ -8,9 +8,9 @@ if(isset($_POST['submit'])){
 //1. Spara kommentaren
 $message = mysqli_real_escape_string($connection, $_POST['message']);
 //2. Spara vilken användare som är inloggad
-$user_ID = $_SESSION['user'];
+$user_ID = $_SESSION['userID'];
 //3. Spara vilken bok det är användaren kommenterar på.
-$book_ISBN = //Nuvarande bok.
+$book_ISBN = $_POST['m-b-isbn'];
 
 $addComment = "INSERT INTO comment_table (comment_comment, user_id, book_ISBN) VALUES ('$message','$user_ID', '$book_ISBN')";
 $newComment = $connection->query($addComment);
