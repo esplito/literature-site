@@ -3,7 +3,7 @@ require('connect.php');
 	
 
 	$get_isbn = $_GET['b'];
-	//$get_title = $connection->real_escape_string($_POST['']);
+
 	$get_book_query = $connection-> query("SELECT book_ISBN, book_title, book_author, book_edition, book_releashed_year  FROM book_table WHERE book_ISBN = ('".$get_isbn."') ");
 
 	if($get_book_query === FALSE) { 
