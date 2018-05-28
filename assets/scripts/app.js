@@ -91,6 +91,11 @@ $('#update-profile').click(function(e){
 	$('.modal').toggleClass('modal--visible');
 });
 
+$('#remove-user').click(function(e){
+	e.preventDefault();
+	window.location.href = "removeacc.php";
+});
+
 $('.header__profile-btn button').click(function(e){
 	e.preventDefault();
 	if(window.location.href.match(/pages/g)){
