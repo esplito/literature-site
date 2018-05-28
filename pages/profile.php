@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="../assets/styles/styles.css" rel="stylesheet">
 	<script src="../assets/scripts/jquery.js" type="text/javascript"></script>
+	<!-- Script för att länka till profile om man trycker på profile-btn finns längr ner ovanför bodyn-tagen. -->
 </head>
 <body>
 <?php
@@ -35,6 +36,9 @@ include '../include/header.php';
 						</div>
 						<div class="user__row">
 							<button class="btn btn--default btn--a-full-w" id="update-profile">Uppdatera profil</button>
+						</div>
+						<div class="user__row">
+							<button class="btn btn--default btn--a-full-w" id="remove-user">Ta bort konto</button>
 						</div>
 						<!-- Knapp som ska länka till 'remove_acc.php'
 						<div class="user__row">

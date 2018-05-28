@@ -100,13 +100,16 @@
 					</div>
 				</div>
 				<div class="section__col-m-6">
-
-
-
-
+				</div>
 				</div>
 		</div>
 	</div>
+	<div class="modal">
+		<div class="modal__inner">
+		</div>
+		<div class="modal__close">X</div>
+		</div>
+		<script src="../assets/scripts/app.js" type="text/javascript"></script>
 </body>
 </html>
 <?php //endif; ?>
