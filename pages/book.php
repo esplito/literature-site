@@ -17,7 +17,7 @@ require('../assets/php/BookPage/book_info.php');
 	<div class="container">
 		<div class="wrapper__body">
 			<div class="section__row section__row--align-l">
-				<a href="#" class="section__back-link">Tillbaka till sökresultat</a>
+				<!-- <a href="#" class="section__back-link">Tillbaka till sökresultat</a> -->
 			</div>
 			<div class="section__row">
 				<div class="section__col-4 section__col-4--left">
