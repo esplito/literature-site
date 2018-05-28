@@ -10,10 +10,10 @@
       </a>
     </div>
     <div class="header__search">
-      <form class="header__search__form" id="search-btn" method="post" action="assets/php/search_request.php">
-        <input type="text" placeholder="Sök bland omdömen på massor av kursböcker!" class="header__search-box">
+      <form class="header__search__form"  method="POST" action="./assets/php/Search_Request.php">
+        <input type="text" name="search" placeholder="Sök bland omdömen på massor av kursböcker!" class="header__search-box">
         <div class="header__search-btn">
-          <button name="search" type="submit"><i class="fa fa-search"></i></button>
+          <button name="search-btn" type="submit"><i class="fa fa-search"></i></button>
         </div>
       </form>
     </div>
