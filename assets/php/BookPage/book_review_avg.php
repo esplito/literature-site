@@ -23,8 +23,7 @@ if($AVG==5) {
 	<span class='stars__star fa fa-star stars__star--checked'></span>
 	<span class='stars__star fa fa-star stars__star--checked'></span>
 	<span class='stars__star fa fa-star stars__star--checked'></span>
-	<span class='stars__star fa fa-star stars__star--checked'></span>
-	<span class='stars__star fa fa-star'></span>";
+	<span class='stars__star fa fa-star stars__star--checked'></span>";
 }
 elseif($AVG==4) {
 
@@ -56,7 +55,7 @@ elseif($AVG==1){
 	<span class='stars__star fa fa-star'></span>
 	<span class='stars__star fa fa-star'></span>
 	<span class='stars__star fa fa-star'></span>
-	<span class='stars__star fa fa-star'></span>>";	
+	<span class='stars__star fa fa-star'></span>";	
 }
 elseif($AVG==0){
 

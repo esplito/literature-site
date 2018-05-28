@@ -38,7 +38,7 @@ require('../assets/php/BookPage/book_info.php');
 						<div class="book__details">
 							<div class="section__row section__row--s-margin">
 								<div class="rating">
-									<?php include "/../assets/php/BookPage/book_review_avg.php" ?>
+									<?php include "../assets/php/BookPage/book_review_avg.php" ?>
 								</div>
 							</div>
 							<div class="section__row section__row--s-margin">
