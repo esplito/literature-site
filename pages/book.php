@@ -1,6 +1,8 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
+<?php
+require('../assets/php/BookPage/book_info.php');
+
+
+?>
 	<meta charset="UTF-8">
 	<title>Kursbok</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Montserrat:400,700" rel="stylesheet">
@@ -8,6 +10,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="../assets/styles/styles.css" rel="stylesheet">
 	<script src="../assets/scripts/jquery.js" type="text/javascript"></script>
+
 
 </head>
 <body>
@@ -27,30 +30,35 @@
 				</div>
 				<div class="section__col-8">
 					<div class="section__row section__row--align-l">
-						<h3 class="book__title">Business Information Systems</h3>
-						<p class="book__author">av <span id="author">Paul Beynon-Davies</span></p>
+						<h3 class="book__title">
+							<?php echo($title)?>
+						</h3>
+						<p class="book__author">av <span id="author">	
+							<?php echo($author)?></span></p>
 						<div class="book__details">
 							<div class="section__row section__row--s-margin">
 								<div class="rating">
-									<span class="stars__star fa fa-star stars__star--checked"></span>
-									<span class="stars__star fa fa-star"></span>
-									<span class="stars__star fa fa-star"></span>
-									<span class="stars__star fa fa-star"></span>
-									<span class="stars__star fa fa-star"></span>
+									<?php include "/../assets/php/BookPage/book_review_avg.php" ?>
 								</div>
 							</div>
 							<div class="section__row section__row--s-margin">
 								<p class="book__details__info">
 									<span class="label label--attribute">Upplaga: </span>
-									<span>2:a</span>
+									<span>
+											<?php echo($edition)?>
+									</span>
 								</p>
 								<p class="book__details__info">
 									<span class="label label--attribute">ISBN: </span>
-									<span>9781137265807</span>
+									<span>
+											<?php echo($ISBN)?>
+									</span>
 								</p>
 								<p class="book__details__info">
 									<span class="label label--attribute">Utgiven: </span>
-									<span>2013</span>
+									<span>
+											<?php echo($released_year)?>
+									</span>
 								</p>
 							</div>
 						</div>
@@ -60,53 +68,9 @@
 			<div class="section__row section__row--align-l">
 				<h2>Omdömen</h2>
 				<div class="section__col-12 book__reviews">
-					<div class="section__row section__row--align-l section__row--review">
-						<div class="rating rating--no-margin-t">
-							<span class="stars__star fa fa-star stars__star--checked"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-						</div>
-						<div class="book__reviews__comment">
-							<span class="label">Vilken bok! NOT.</span>
-						</div>
-						<div class="book__reviews__user">
-							<span class="label label--smaller">whatthealgo</span>
-						</div>
-					</div>
-					<div class="section__divider"></div>
-					<div class="section__row section__row--align-l section__row--review">
-						<div class="rating rating--no-margin-t">
-							<span class="stars__star fa fa-star stars__star--checked"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-						</div>
-						<div class="book__reviews__comment">
-							<span class="label">Inge vidare!</span>
-						</div>
-						<div class="book__reviews__user">
-							<span class="label label--smaller">booksarelife</span>
-						</div>
-					</div>
-					<div class="section__divider"></div>
-					<div class="section__row section__row--align-l section__row--review section__row--last">
-						<div class="rating rating--no-margin-t">
-							<span class="stars__star fa fa-star stars__star--checked"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-							<span class="stars__star fa fa-star"></span>
-						</div>
-						<div class="book__reviews__comment">
-							<span class="label">Oh no...</span>
-						</div>
-						<div class="book__reviews__user">
-							<span class="label label--smaller">whatdidyousay</span>
-						</div>
-					</div>
+					<?php
+					include "../assets/php/BookPage/book_review.php"
+					?>			
 				</div>
 			</div>
 		</div>
