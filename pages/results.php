@@ -107,6 +107,7 @@
 				</div>
 		</div>
 	</div>
+		<script src="../assets/scripts/app.js" type="text/javascript"></script>
 </body>
 </html>
 <?php //endif; ?>

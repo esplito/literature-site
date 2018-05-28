@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="../assets/styles/styles.css" rel="stylesheet">
 	<script src="../assets/scripts/jquery.js" type="text/javascript"></script>
+	<!-- Script för att länka till profile om man trycker på profile-btn finns längr ner ovanför bodyn-tagen. -->
 </head>
 <body>
 <?php
