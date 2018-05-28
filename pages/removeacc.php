@@ -21,37 +21,6 @@
 					<?php
 					include "../assets/php/remove_acc.php";
 					?>
-          <div class="user__row section__row--align-l">
-            <div class="user__image-holder f-left">
-              <a href="#">
-                <img class="user__image" src="../assets/images/profile_pic.png">
-              </a>
-            </div>
-            <div class="user__name f-left">
-              <p>whatthealgo</p>
-            </div>
-            <div class="user__delete f-right">
-              <a href="#" class="section__btn-link">
-                <button class="btn btn--small btn--b-text">Ta bort</button>
-              </a>
-            </div>
-          </div>
-
-          <div class="user__row section__row--align-l">
-            <div class="user__image-holder f-left">
-              <a href="#">
-                <img class="user__image" src="../assets/images/profile_pic.png">
-              </a>
-            </div>
-            <div class="user__name f-left">
-              <p>booksarelife</p>
-            </div>
-            <div class="user__delete f-right">
-              <a href="#" class="section__btn-link">
-                <button class="btn btn--small btn--b-text">Ta bort</button>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </div>

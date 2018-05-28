@@ -1,7 +1,9 @@
 <?php
 require('connect.php');
 
-	$get_comment_query = $connection -> query("SELECT comment_comment FROM comment_table ORDER BY comment_id");
+	$get_title = "Systems Analysis and Design";
+	//$get_title = $connection->real_escape_string($_POST['']);
+	$get_comment_query = $connection -> query("SELECT comment_comment FROM comment_table  JOIN book_table WHERE book_title =  ('".$get_title."') ");
 
 
 	if($get_comment_query === FALSE) { 
@@ -12,7 +14,7 @@ require('connect.php');
 		{
 		$kommentar=$row['comment_comment'];
 
-		echo $kommentar. '<br />';
+		return $kommentar. '<br />';
 		}
 
 ?>
