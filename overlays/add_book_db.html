@@ -1,5 +1,5 @@
 <h1 class="modal__title">Lägg till bok på kursbok.se</h1>
-<form class="form" id="add_book_to_db" method="POST" action="../assets/php/Book_Add.php">
+<form class="form" id="add_book_to_db" enctype="multipart/form-data" method="POST" action="../assets/php/Book_Add.php">
 	<div class="form__row">
 		<label class="label label--default">ISBN</label>
 		<input type="text" placeholder="Skriv bokens ISBN här..." name="add_ISBN">
@@ -21,7 +21,7 @@
       <input type="text" placeholder="Skriv bokens utgivningsår här..." name="add_published_year">
     </div>
     <div class="form__row form__row--btn">
-      <button class="btn btn--smaller btn--green" name="file" type="file">Välj bild</button>
+      <input class="btn btn--smaller btn--green" name="file" type="file">Välj bild</input>
     </div>
 	<div class="form__row form__row--btn">
 		<button name="submit_new_book"class="btn btn--default btn--green" type="submit">Spara bok</button>
