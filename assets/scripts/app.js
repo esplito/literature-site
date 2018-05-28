@@ -105,3 +105,8 @@ $('.header__profile-btn button').click(function(e){
 		window.location.href = "./pages/profile.php";
 	}
 });
+
+if(window.location.href.match(/pages/g)){
+	$('#logout-btn').attr('href', '../assets/php/logout-process.php');
+	$('.header__search__form').attr('action', '../assets/php/search_request.php');
+}
