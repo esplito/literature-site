@@ -2,7 +2,7 @@
 require('connect.php');
 
 $get_title = "Systems Analysis and Design";
-
+//	//$get_title = $connection->real_escape_string($_POST['']);
 $get_review_query = $connection-> query("SELECT review_comment, rating_by_user FROM review_table JOIN book_table WHERE book_title = ('".$get_title."')");
 
 	if($get_review_query === FALSE) { 
@@ -15,7 +15,7 @@ $get_review_query = $connection-> query("SELECT review_comment, rating_by_user F
 		$review_comment=$row['review_comment'];	
 		$rating_by_user=$row['rating_by_user'];	
 
-		echo  $review_comment. ", ". $rating_by_user.'<br />';
+		return  $review_comment. ", ". $rating_by_user.'<br />';
 		}
 
 ?>
