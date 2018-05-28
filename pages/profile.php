@@ -37,6 +37,9 @@ include '../include/header.php';
 						<div class="user__row">
 							<button class="btn btn--default btn--a-full-w" id="update-profile">Uppdatera profil</button>
 						</div>
+						<div class="user__row">
+							<button class="btn btn--default btn--a-full-w" id="remove-user">Ta bort konto</button>
+						</div>
 						<!-- Knapp som ska länka till 'remove_acc.php'
 						<div class="user__row">
 							<button class="btn btn--default btn--a-full-w" id="admin-accounts" href="#">Administrera användare</button>

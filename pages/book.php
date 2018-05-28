@@ -114,7 +114,7 @@
 	<div class="modal modal-review">
 		<div class="modal__inner">
 		<h1 class="modal__title">Lägg till omdöme</h1>
-			<form class="form" id="save-review">
+			<form class="form" method="POST" action="../assets/php/add_review.php" id="save-review">
 				<div class="form__row">
 					<div class="stars">
 						<span class="stars__star stars__star--bigger fa fa-star" data-rating="1"></span>
@@ -135,6 +135,7 @@
 		</div>
 		<div class="modal__close modal__close-review">X</div>
 	</div>
+	<!-- För att logga in -->
 	<div class="modal">
 		<div class="modal__inner">
 		</div>
