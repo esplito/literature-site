@@ -21,7 +21,7 @@ $get_highest = "SELECT ROUND(AVG(rating_by_user), 0) AS average, highest.book_IS
 			}
 
 			echo '<a href="./pages/book.php?b=' . $books[$i]['book_ISBN'] . '">';
-			echo '<img src="./assets/images/'.$books[$i]['book_picture'].'" class="img__book--medium">';
+			echo '<img src="./uploads/'.$books[$i]['book_picture'].'" class="img__book--medium">';
 			echo '</a>';
 			echo '<div class="rating">';
 			if($books[$i]['average']==5) {
