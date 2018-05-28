@@ -40,6 +40,36 @@ function setReviewRating(rating){
 	$('.modal [name="review-rating"]').val(rating);
 }
 
+function displayComments(comments){
+	if(comments !== undefined){
+		$('.message-board__feed').append(function(){
+			var user = '<span class="message-board__user">' + comments.user_uname + '</span>';
+			var comment = '<p class="message-board__comment">' + comments.comment_comment + '</p>';
+
+			return '<div class="message-board__row">' + user + comment + '</div>';
+		});
+	}
+}
+
+function getComments(isbn){
+	$.ajax({
+       type: "POST",
+       url: '../assets/php/get_comments.php',
+       datatype: 'json',
+       data: {
+       	book_isbn: isbn
+       },
+       success: function(response)
+       {
+       	  var allcomments = JSON.parse(response);
+       	  $('.message-board__feed').html('');
+          for (var i = allcomments.length; i >= 0; i--) {
+          	displayComments(allcomments[i]);
+          }
+       }
+    });	
+}
+
 var rating = 0;
 
 $('.modal .stars__star').click(function(e) {
@@ -81,6 +111,8 @@ $('#review-book').click(function(e){
 
 $('#discuss-book').click(function(e){
 	e.preventDefault();
+	var isbn = $('[name="m-b-isbn"]').val();
+	getComments(isbn);
 	$('.message-board').toggleClass('message-board--visible');
 });
 
