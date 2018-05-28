@@ -83,6 +83,8 @@ require('../assets/php/BookPage/book_info.php');
 		<div class="modal__inner">
 		<h1 class="modal__title">Lägg till omdöme</h1>
 			<form class="form" method="POST" action="../assets/php/add_review.php" id="save-review">
+				<input type="hidden" name="b-isbn" value="<?php echo $ISBN ?>" />
+				<input type="hidden" name="review-rating" value="0" />
 				<div class="form__row">
 					<div class="stars">
 						<span class="stars__star stars__star--bigger fa fa-star" data-rating="1"></span>
