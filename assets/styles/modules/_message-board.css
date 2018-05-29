@@ -71,17 +71,17 @@
 	max-width: 20%;
 	font-size: 0.8125rem;
 	font-weight: bold;
+  margin-right: 20px;
 }
 .message-board__comment{
-	margin: 0 0 0 10px;
-	max-width: 80%;
-	font-size: 0.6875rem;
-	height: 100%;
-  	overflow: hidden;
+  margin: 2px 0 0 10px;
+  max-width: 80%;
+  font-size: 0.6875rem;
+  height: 100%;
+  overflow: hidden;
 }
 
 .message-board__footer{
 	height: auto;
 	position: relative;
 }
-
