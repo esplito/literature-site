@@ -97,9 +97,7 @@ elseif ($usersessionlevel == 3) {
         </a>
       </div>
     </div>";}
-
-  }
-
+    
     echo "<div class='user__row section__row--align-l'>
         <div class='user__image-holder f-left'>
           <a href='#'>
@@ -115,3 +113,4 @@ elseif ($usersessionlevel == 3) {
           </a>
         </div>
       </div>";
+  }
