@@ -19,7 +19,7 @@ include '../include/header.php';
 			<div class="section__row">
 				<div class="section__col-4 section__col-4--left">
 					<div class="user">
-						<img class="user__image" src="../assets/images/profile_pic.png">
+						<?php include '../assets/php/picture.php' ?>
 						<h3><?php echo $_SESSION["user"];?></h3>
 						<div class="user__info">
 							<div class="user__row">
