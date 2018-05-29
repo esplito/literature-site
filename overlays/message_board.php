@@ -9,12 +9,12 @@
 		
 	</div>
 	<div class="message-board__footer">
-		<form class="form" method="post" action="../assets/php/messageBoard-process.php" id="message_submit">
+		<form class="form" id="message_submit">
 	        <div class="form__row form__row--message">
 	          <label class="label label--default">Meddelande</label>
 	          <textarea  type="text" placeholder="Skriv ditt meddelande här..." name="message" maxlength="100"></textarea>
 	          <input type="hidden" name="m-b-isbn" value="<?php echo $ISBN ?>" />
-	          <button class="btn btn--smaller btn--white" name="submit" type="submit">Skicka</button>
+	          <button class="btn btn--smaller btn--white" name="submit" type="submit" id="submit-comment">Skicka</button>
 	        </div>
 		</form>
 	</div>

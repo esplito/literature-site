@@ -9,6 +9,8 @@ function setStars(current){
 	});
 }
 
+function getById (id) {return document.getElementById(id)};
+
 function resetStars(){
 	$('.stars__star--checked').toggleClass('stars__star--checked');
 }
@@ -141,6 +143,29 @@ $('.header__profile-btn button').click(function(e){
 	else{
 		window.location.href = "./pages/profile.php";
 	}
+});
+
+$('#submit-comment').click(function(e){
+	e.preventDefault();
+	var submit_form = getById('message_submit');
+	var comment_input = submit_form.elements["message"].value;
+	var comment_isbn = submit_form.elements["m-b-isbn"].value;
+
+	$.ajax({
+       type: "POST",
+       url: '../assets/php/messageBoard-process.php',
+       data: {
+       	post: 'submit',
+       	com: comment_input,
+       	isbn: comment_isbn
+       },
+       success: function(response)
+       {
+          if (response==="success") {
+          	getComments(comment_isbn);
+          }			          
+       }
+   });	
 });
 
 if(window.location.href.match(/pages/g)){

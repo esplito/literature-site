@@ -48,6 +48,7 @@
   border: 1px solid #545454;
   padding-left: 5px;
   padding-right: 5px;
+  overflow: auto;
 }
 
 .message-board__row{
