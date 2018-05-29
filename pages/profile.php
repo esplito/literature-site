@@ -73,42 +73,7 @@ include '../include/header.php';
 					<div class="section__row section__row--align-l">
 						<h2>Mina omdömen</h2>
 						<div id="my-reviews">
-							<div class="section__row section__row--s-margin">
-								<div class="review__books__title label--v-centered label--float-l">
-									<span class="label--smaller">Business Information Systems</span>
-								</div>
-								<div class="rating rating--inline">
-									<span class="stars__star fa fa-star stars__star--checked"></span>
-									<span class="stars__star fa fa-star stars__star--checked"></span>
-									<span class="stars__star fa fa-star"></span>
-									<span class="stars__star fa fa-star"></span>
-									<span class="stars__star fa fa-star"></span>
-								</div>
-							</div>
-							<div class="section__row section__row--s-margin">
-								<div class="review__books__title label--v-centered label--float-l">
-									<span class="label--smaller">How to THINK Like a Programmer</span>
-								</div>
-								<div class="rating rating--inline">
-									<span class="stars__star fa fa-star stars__star--checked"></span>
-									<span class="stars__star fa fa-star"></span>
-									<span class="stars__star fa fa-star"></span>
-									<span class="stars__star fa fa-star"></span>
-									<span class="stars__star fa fa-star"></span>
-								</div>
-							</div>
-							<div class="section__row section__row--s-margin">
-								<div class="review__books__title label--v-centered label--float-l">
-									<span class="label--smaller">Systems Analysis and Design</span>
-								</div>
-								<div class="rating rating--inline">
-									<span class="stars__star fa fa-star stars__star--checked"></span>
-									<span class="stars__star fa fa-star stars__star--checked"></span>
-									<span class="stars__star fa fa-star stars__star--checked"></span>
-									<span class="stars__star fa fa-star stars__star--checked"></span>
-									<span class="stars__star fa fa-star"></span>
-								</div>
-							</div>
+							<?php include '../assets/php/get_reviews_profile.php'; ?>
 						</div>
 					</div>
 				</div>
