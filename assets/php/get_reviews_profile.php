@@ -5,13 +5,13 @@ if(isset($_SESSION['userID'])){
 	require('connect.php');
 
 	$u_id =$_SESSION['userID'];
-	$get_reviews_profile = "SELECT book_table.book_title, review_table.rating_by_user FROM book_table JOIN review_table ON book_table.book_ISBN = review_table.book_ISBN JOIN user_table ON review_table.user_id = '$u_id'";
+	$get_reviews_profile = "SELECT DISTINCT book_table.book_title, review_table.rating_by_user FROM book_table JOIN review_table ON book_table.book_ISBN = review_table.book_ISBN JOIN user_table ON review_table.user_id = '$u_id'";
 
 	$result = $connection ->query($get_reviews_profile);
 
-	while ($row = mysqli_fetch_array($result)) 
+	while ($row = mysqli_fetch_array($result))
 		{
-			$book_title=$row['book_title'];	
+			$book_title=$row['book_title'];
 			$rating_by_user=$row['rating_by_user'];
 
 			echo '<div class="section__row section__row--s-margin">
@@ -34,7 +34,7 @@ if(isset($_SESSION['userID'])){
 				<span class='stars__star fa fa-star stars__star--checked'></span>
 				<span class='stars__star fa fa-star stars__star--checked'></span>
 				<span class='stars__star fa fa-star stars__star--checked'></span>
-				<span class='stars__star fa fa-star'></span>";	
+				<span class='stars__star fa fa-star'></span>";
 			}
 			elseif($rating_by_user==3) {
 
@@ -42,7 +42,7 @@ if(isset($_SESSION['userID'])){
 				<span class='stars__star fa fa-star stars__star--checked'></span>
 				<span class='stars__star fa fa-star stars__star--checked'></span>
 				<span class='stars__star fa fa-star'></span>
-				<span class='stars__star fa fa-star'></span>";	
+				<span class='stars__star fa fa-star'></span>";
 			}
 			elseif($rating_by_user==2){
 
@@ -50,7 +50,7 @@ if(isset($_SESSION['userID'])){
 				<span class='stars__star fa fa-star stars__star--checked'></span>
 				<span class='stars__star fa fa-star'></span>
 				<span class='stars__star fa fa-star'></span>
-				<span class='stars__star fa fa-star'></span>";	
+				<span class='stars__star fa fa-star'></span>";
 			}
 			elseif($rating_by_user==1){
 
@@ -58,7 +58,7 @@ if(isset($_SESSION['userID'])){
 				<span class='stars__star fa fa-star'></span>
 				<span class='stars__star fa fa-star'></span>
 				<span class='stars__star fa fa-star'></span>
-				<span class='stars__star fa fa-star'></span>";	
+				<span class='stars__star fa fa-star'></span>";
 			}
 			elseif($rating_by_user==0){
 
@@ -66,7 +66,7 @@ if(isset($_SESSION['userID'])){
 				<span class='stars__star fa fa-star'></span>
 				<span class='stars__star fa fa-star'></span>
 				<span class='stars__star fa fa-star'></span>
-				<span class='stars__star fa fa-star'></span>";	
+				<span class='stars__star fa fa-star'></span>";
 			}
 
 			echo '</div></div>';
