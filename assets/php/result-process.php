@@ -19,7 +19,7 @@
     echo '<div class="section__book">';
     echo '<div class="img__book">';
     echo '<a href="../pages/book.php?b=' . $bookISBN . '">';
-    echo '<img src="../assets/images/' . $picturerow . ' class="img__book--small">';
+    echo '<img src="../uploads/' . $picturerow . '" class="img__book--small">';
     echo '</a>';
     echo '</div>';
     echo '<div class="section__bookinfo">';

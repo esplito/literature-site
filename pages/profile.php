@@ -28,7 +28,7 @@ include '../include/header.php';
 							</div>
 							<div class="user__row">
 								<label class="label label--attribute">Antal omdömen: </label>
-								<span class="user__info__review-number">3</span>
+								<span class="user__info__review-number"><?php include '../assets/php/get_number_of_reviews.php' ?></span>
 							</div>
 						</div>
 						<div class="user__row">

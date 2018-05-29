@@ -22,7 +22,7 @@ require('../assets/php/BookPage/book_info.php');
 			<div class="section__row">
 				<div class="section__col-4 section__col-4--left">
 					<div class="book">
-						<img class="img__book--large" src="../assets/images/business-information-systems.jpg">
+						<img class="img__book--large" src="../uploads/<?php echo($picture)?>">
 						<?php
 					      if(isset($_SESSION['user'])):
 					    ?>

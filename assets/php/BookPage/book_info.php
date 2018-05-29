@@ -4,7 +4,7 @@ require('connect.php');
 
 	$get_isbn = $_GET['b'];
 
-	$get_book_query = $connection-> query("SELECT book_ISBN, book_title, book_author, book_edition, book_releashed_year  FROM book_table WHERE book_ISBN = ('".$get_isbn."') ");
+	$get_book_query = $connection-> query("SELECT book_ISBN, book_title, book_author, book_edition, book_releashed_year, book_picture  FROM book_table WHERE book_ISBN = ('".$get_isbn."') ");
 
 	if($get_book_query === FALSE) { 
     die(mysql_error());
@@ -18,10 +18,11 @@ require('connect.php');
 		$author=$row['book_author'];	
 		$edition=$row['book_edition'];
 		$released_year=$row['book_releashed_year'];	
+		$picture=$row['book_picture'];
 	
 		
 			
-		return $ISBN . ", ". $title .", ". $author .", ". $edition .", ". $released_year.'<br />';
+		return $ISBN . ", ". $title .", ". $author .", ". $edition .", ". $released_year. ", ". $picture .'<br />';
 		}
 
 
