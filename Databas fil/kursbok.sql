@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 29 maj 2018 kl 10:50
+-- Tid vid skapande: 29 maj 2018 kl 11:03
 -- Serverversion: 10.1.32-MariaDB
 -- PHP-version: 7.2.5
 
@@ -92,7 +92,8 @@ INSERT INTO `review_table` (`review_id`, `book_ISBN`, `user_id`, `review_comment
 (4, '9781137265807', 3, 'Bra bok med mÃ¥nga bilder', 4),
 (5, '9781408065822', 3, 'Ger en okej fÃ¶rstÃ¥else inom programmering', 3),
 (6, '9789144013640', 3, 'SvÃ¥r och trÃ¥kig', 1),
-(7, '9781118093740', 5, 'En av de bÃ¤ttre bÃ¶ckerna inom det hÃ¤r Ã¤mnet', 4);
+(7, '9781118093740', 5, 'En av de bÃ¤ttre bÃ¶ckerna inom det hÃ¤r Ã¤mnet', 4),
+(8, '9781137265807', 5, 'Rekommenderar denna!', 4);
 
 -- --------------------------------------------------------
 
@@ -149,7 +150,7 @@ INSERT INTO `user_table` (`user_id`, `user_uname`, `user_email`, `user_password`
 (3, 'Tobias_Persson', 'TobiasPersson@mail.se', 'password', 'KTH', 0x44534330303239352e4a5047, 1),
 (4, 'Emil_Andersson', 'EmilAndersson@mail.se', 'password', NULL, NULL, 2),
 (5, 'Johan_Israelsson', 'JohanIsraelsson@mail.se', 'password', NULL, NULL, 3),
-(6, 'Emil_Andersson', 'EmilEsplund@mail.se', 'password', NULL, NULL, 1);
+(6, 'Emil_Esplund\r\n', 'EmilEsplund@mail.se', 'password', NULL, NULL, 1);
 
 --
 -- Index för dumpade tabeller
@@ -210,7 +211,7 @@ ALTER TABLE `comment_table`
 -- AUTO_INCREMENT för tabell `review_table`
 --
 ALTER TABLE `review_table`
-  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT för tabell `user_table`
