@@ -5,8 +5,8 @@
     if(isset($_POST['show__all-btn']) || isset($_POST['filter-btn'])){
 
     //Hämtar från databas
-    $sql = "SELECT ROUND(AVG(rating_by_user), 0) AS average, highest.book_ISBN,book_title,book_picture, book_releashed_year, review_table.rating_by_user FROM book_table AS highest JOIN review_table ON review_table.book_ISBN = highest.book_ISBN GROUP BY highest.book_ISBN ORDER BY average DESC";
-    
+    $sql = "SELECT ROUND(AVG(rating_by_user), 0) AS average, highest.book_ISBN,book_title,book_picture, book_releashed_year, review_table.rating_by_user FROM book_table AS highest LEFT JOIN review_table ON review_table.book_ISBN = highest.book_ISBN GROUP BY highest.book_ISBN ORDER BY book_title ASC";
+
     $result = mysqli_query($connection, $sql);
 
     while($rows = $result ->fetch_assoc()){
@@ -30,7 +30,7 @@
     echo '<p class="label--tiny">' . $releaserow . '</p>';
     echo '<div class="rating__small">';
 
-    //Kikar vilket betyg boken har, och echoar ut respektive. 
+    //Kikar vilket betyg boken har, och echoar ut respektive.
     if($avg==5) {
       echo '<span class="stars__star fa fa-star stars__star--checked"></span>
       <span class="stars__star fa fa-star stars__star--checked"></span>
