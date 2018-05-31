@@ -1,11 +1,28 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 if(isset($_SESSION['userID'])){
 
 	require('connect.php');
-
+	$get_reviews_profile = "";
 	$u_id =$_SESSION['userID'];
-	$get_reviews_profile = "SELECT DISTINCT book_table.book_title, review_table.rating_by_user FROM book_table JOIN review_table ON book_table.book_ISBN = review_table.book_ISBN JOIN user_table ON review_table.user_id = '$u_id'";
+	if(isset($_POST['rating'])){
+		$_SESSION['rating'] = $_POST['rating'];
+		echo $_SESSION['rating'];
+		header('Location: ../../pages/profile.php');
+	}
+	elseif(isset($_SESSION['rating'])){
+		$rating = $_SESSION['rating'];
+		$get_reviews_profile = "SELECT DISTINCT book_table.book_title, review_table.rating_by_user FROM book_table JOIN review_table ON book_table.book_ISBN = review_table.book_ISBN JOIN user_table ON review_table.user_id = '$u_id' WHERE review_table.rating_by_user = '$rating'";
+		unset($_SESSION['rating']); 
+	}
+	else{
+		$get_reviews_profile = "SELECT DISTINCT book_table.book_title, review_table.rating_by_user FROM book_table JOIN review_table ON book_table.book_ISBN = review_table.book_ISBN JOIN user_table ON review_table.user_id = '$u_id'";
+	}
+
+	
 
 	$result = $connection ->query($get_reviews_profile);
 
@@ -71,7 +88,6 @@ if(isset($_SESSION['userID'])){
 
 			echo '</div></div>';
 	}
-
 }
 else{
 	echo '<div class="section__row section__row--s-margin">

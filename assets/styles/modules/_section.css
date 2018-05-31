@@ -12,6 +12,13 @@
 	margin-left: 15px;
 }
 
+.section__radios{
+	width: 40%;
+	display: block;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
 .section__title--smaller{
 	font-size: 12px;
 	float: left;
@@ -32,6 +39,12 @@
 
 .section__title--f{
 	margin-right: 15px;
+	width: 100%;
+}
+
+.section__title--f:after{
+	content: " ";
+	clear: both;
 }
 
 .section__row{

@@ -17,31 +17,6 @@
 			<div class="section__row">
 				<h1 class="section__title section__title--smaller section__title--left">Alla inlagda böcker!</h1>
 			</div>
-			<div class="section__row section__row--align-l">
-				<h1 class="section__title section__title--smaller section__title--left section__title--f">Rating: </h1>
-				<form action="" method="post">
-					<div class="section__col-12 section__col-4--left">
-						<div class="section--inline">
-						  <input type="radio" name="rating" value="1">
-						  <input type="radio" name="rating" value="2">
-						  <input type="radio" name="rating" value="3">
-						  <input type="radio" name="rating" value="4">
-						  <input type="radio" name="rating" value="5">
-						  <div>
-						  	  <span class="label label--default label--radio">1</span>
-							  <span class="label label--default label--radio">2</span>
-							  <span class="label label--default label--radio">3</span>
-							  <span class="label label--default label--radio">4</span>
-							  <span class="label label--default label--radio">5</span>
-						  </div>
-					    </div>
-					    <div class="section--inline section--small-margin-l">
-						  <button type="submit" name="filter-btn" class="btn btn--default btn--smaller">Filtrera</button>
-						</div>
-					</div>
-				</form>
-			</div>
-
 			<div class="section__row">
 				<div class="section__col-m-6">
 					<?php include '../assets/php/result-process.php'; ?> <!-- Visar alla böcker -->

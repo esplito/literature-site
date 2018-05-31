@@ -72,6 +72,32 @@ include '../include/header.php';
 					</div>-->
 					<div class="section__row section__row--align-l">
 						<h2>Mina omdömen</h2>
+						<div class="section__row section__row--s-margin">
+							<h1 class="section__title section__title--smaller section__title--left section__title--f">Rating: <?php 
+							if(isset($_SESSION['rating'])){
+								echo $_SESSION['rating'];
+							}
+							?></h1>
+							<form action="../assets/php/get_reviews_profile.php" method="post">
+									<div class="section__radios section--inline">
+									  <input type="radio" name="rating" value="1">
+									  <input type="radio" name="rating" value="2">
+									  <input type="radio" name="rating" value="3">
+									  <input type="radio" name="rating" value="4">
+									  <input type="radio" name="rating" value="5">
+									  <div>
+									  	  <span class="label label--default label--radio">1</span>
+										  <span class="label label--default label--radio">2</span>
+										  <span class="label label--default label--radio">3</span>
+										  <span class="label label--default label--radio">4</span>
+										  <span class="label label--default label--radio">5</span>
+									  </div>
+								    </div>
+								    <div class="section--inline">
+									  <button type="submit" name="filter-btn" class="btn btn--default btn--smaller">Filtrera</button>
+									</div>
+							</form>	
+						</div>	
 						<div id="my-reviews">
 							<?php include '../assets/php/get_reviews_profile.php'; ?>
 						</div>
