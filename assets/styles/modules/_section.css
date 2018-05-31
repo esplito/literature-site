@@ -3,9 +3,18 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
+.section--inline{
+	display: inline-block;
+	float: left;
+}
+
+.section--small-margin-l{
+	margin-left: 15px;
+}
+
 .section__title--smaller{
-		font-size: 12px;
-		float: left;
+	font-size: 12px;
+	float: left;
 }
 
 .section__title--bigger{
@@ -19,6 +28,10 @@
 
 .section__title--left{
 	text-align: left;
+}
+
+.section__title--f{
+	margin-right: 15px;
 }
 
 .section__row{
@@ -59,6 +72,7 @@
 .section__col-4--left{
 	float:left;
 }
+
 .section__col-m-6{
 	width: 100%;
 	float: 	left;
@@ -100,8 +114,9 @@
 }
 
 .section__bookinfo{
+	float: left;
+	margin-left: 20px;
 	text-align: left;
-	margin-left: 120px;
 }
 
 .section__divider{

@@ -32,6 +32,12 @@
 	margin-right: 5px;
 }
 
+.label--radio{
+	display: inline-block;
+	margin-right: 6px;
+	margin-left: 7px;
+}
+
 .label--v-centered{
 	height: 30px;
 	display: flex;

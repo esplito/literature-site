@@ -2,10 +2,11 @@
 
     //Kommer hit om man klickar på "Visa Alla" under startsidan.
 
-    if(isset($_POST['show__all-btn'])){
+    if(isset($_POST['show__all-btn']) || isset($_POST['filter-btn'])){
 
     //Hämtar från databas
     $sql = "SELECT ROUND(AVG(rating_by_user), 0) AS average, highest.book_ISBN,book_title,book_picture, book_releashed_year, review_table.rating_by_user FROM book_table AS highest JOIN review_table ON review_table.book_ISBN = highest.book_ISBN GROUP BY highest.book_ISBN ORDER BY average DESC";
+    
     $result = mysqli_query($connection, $sql);
 
     while($rows = $result ->fetch_assoc()){
@@ -23,7 +24,9 @@
     echo '</a>';
     echo '</div>';
     echo '<div class="section__bookinfo">';
+    echo '<a href="../pages/book.php?b=' . $bookISBN . '">';
     echo '<h1 class="label--smaller">' . $titlerow . '</h1>';
+    echo '</a>';
     echo '<p class="label--tiny">' . $releaserow . '</p>';
     echo '<div class="rating__small">';
 
