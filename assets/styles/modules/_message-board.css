@@ -68,7 +68,7 @@
 }
 
 .message-board__user{
-	max-width: 20%;
+	min-width: 20%;
 	font-size: 0.8125rem;
 	font-weight: bold;
   margin-right: 20px;
