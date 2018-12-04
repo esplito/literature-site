@@ -16,39 +16,49 @@ A design proposal was done in Sketch by esplito (Emil Esplund), before we procee
 We planned to use BEM to structure the CSS: http://getbem.com/naming/
 The site is built with HTML, CSS, JavaScript, php and SQL.
 
-##Screenshots
+## Screenshots
 
 **Home Page**
+
 ![Home Page](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/start_page.png)
 
 **Search Result Page**
-![Search Result Page](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/search_result_page.PNG)
+
+![Search Result Page](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/search_result_page.png)
 
 **Book Page - not logged in**
+
 ![Book Page - not logged in](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/book_page.PNG)
 
 **Register Form Overlay**
+
 ![Register Form Overlay](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/register_view.png)
 
 **Login Form Overlay**
+
 ![Login Form Overlay](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/login_view.png)
 
 **Book Page - logged in**
+
 ![Book Page - logged in](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/book_page_loggedin.PNG)
 
 **Add Book Review - logged in**
+
 ![Add Book Review - logged in](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/add_review_book.PNG)
 
 **Discuss Book Overlay - logged in**
+
 ![Discuss Book Overlay - logged in](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/discuss_view.PNG)
 
 **Profile Page**
+
 ![Profile Page](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/profile_page.PNG)
 
 **Add Book Overlay**
+
 ![Add Book Overlay](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/add_book.PNG)
 
-##Other stuff
+## Other stuff
 **Desired page structure**
 *(this was written down before we started coding)*
 - index.php (Starting page. Search/Filter function and showcase of reviewed books)
